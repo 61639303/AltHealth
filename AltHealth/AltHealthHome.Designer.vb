@@ -84,9 +84,9 @@ Partial Class AltHealthHome
         Me.btnExit.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnExit.Location = New System.Drawing.Point(742, 466)
+        Me.btnExit.Location = New System.Drawing.Point(12, 548)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(131, 76)
+        Me.btnExit.Size = New System.Drawing.Size(177, 76)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -106,7 +106,7 @@ Partial Class AltHealthHome
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(885, 551)
+        Me.ClientSize = New System.Drawing.Size(885, 634)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReporting)
