@@ -25,6 +25,10 @@ Partial Class AltHealthSupplementInfo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AltHealthSupplementInfo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
+        Me.DataGridViewSupplementInfo = New System.Windows.Forms.DataGridView()
+        Me.btnNewSupplement = New System.Windows.Forms.Button()
+        Me.lblHelp = New System.Windows.Forms.Label()
+        CType(Me.DataGridViewSupplementInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -54,13 +58,47 @@ Partial Class AltHealthSupplementInfo
         Me.btnExit.Text = "Close"
         Me.btnExit.UseVisualStyleBackColor = False
         '
+        'DataGridViewSupplementInfo
+        '
+        Me.DataGridViewSupplementInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridViewSupplementInfo.Location = New System.Drawing.Point(217, 86)
+        Me.DataGridViewSupplementInfo.Name = "DataGridViewSupplementInfo"
+        Me.DataGridViewSupplementInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridViewSupplementInfo.Size = New System.Drawing.Size(656, 536)
+        Me.DataGridViewSupplementInfo.TabIndex = 7
+        '
+        'btnNewSupplement
+        '
+        Me.btnNewSupplement.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnNewSupplement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnNewSupplement.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnNewSupplement.Location = New System.Drawing.Point(12, 214)
+        Me.btnNewSupplement.Name = "btnNewSupplement"
+        Me.btnNewSupplement.Size = New System.Drawing.Size(177, 76)
+        Me.btnNewSupplement.TabIndex = 8
+        Me.btnNewSupplement.Text = "New Supplement"
+        Me.btnNewSupplement.UseVisualStyleBackColor = False
+        '
+        'lblHelp
+        '
+        Me.lblHelp.AutoSize = True
+        Me.lblHelp.ForeColor = System.Drawing.Color.Green
+        Me.lblHelp.Location = New System.Drawing.Point(221, 628)
+        Me.lblHelp.Name = "lblHelp"
+        Me.lblHelp.Size = New System.Drawing.Size(194, 13)
+        Me.lblHelp.TabIndex = 9
+        Me.lblHelp.Text = "Double click a record to view full details"
+        '
         'AltHealthSupplementInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(885, 634)
+        Me.ClientSize = New System.Drawing.Size(885, 647)
+        Me.Controls.Add(Me.lblHelp)
+        Me.Controls.Add(Me.btnNewSupplement)
+        Me.Controls.Add(Me.DataGridViewSupplementInfo)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -68,10 +106,14 @@ Partial Class AltHealthSupplementInfo
         Me.Name = "AltHealthSupplementInfo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AltHealth Supplement Info"
+        CType(Me.DataGridViewSupplementInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnExit As System.Windows.Forms.Button
+    Friend WithEvents DataGridViewSupplementInfo As System.Windows.Forms.DataGridView
+    Friend WithEvents btnNewSupplement As System.Windows.Forms.Button
+    Friend WithEvents lblHelp As System.Windows.Forms.Label
 End Class

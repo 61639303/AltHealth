@@ -54,6 +54,7 @@
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -78,6 +79,18 @@
     <Compile Include="AltHealthClientInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AltHealthClientInfoAdd.Designer.vb">
+      <DependentUpon>AltHealthClientInfoAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthClientInfoAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltHealthClientInfoDisplay.Designer.vb">
+      <DependentUpon>AltHealthClientInfoDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthClientInfoDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AltHealthHome.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -97,13 +110,36 @@
     <Compile Include="AltHealthSupplementInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AltHealthSupplementInfoAdd.Designer.vb">
+      <DependentUpon>AltHealthSupplementInfoAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthSupplementInfoAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltHealthSupplementInfoDisplay.Designer.vb">
+      <DependentUpon>AltHealthSupplementInfoDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthSupplementInfoDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AltHealthSupplierInfo.Designer.vb">
       <DependentUpon>AltHealthSupplierInfo.vb</DependentUpon>
     </Compile>
     <Compile Include="AltHealthSupplierInfo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CommonFunctions.vb" />
+    <Compile Include="AltHealthSupplierInfoAdd.Designer.vb">
+      <DependentUpon>AltHealthSupplierInfoAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthSupplierInfoAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltHealthSupplierInfoDisplay.Designer.vb">
+      <DependentUpon>AltHealthSupplierInfoDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthSupplierInfoDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -124,6 +160,12 @@
     <EmbeddedResource Include="AltHealthClientInfo.resx">
       <DependentUpon>AltHealthClientInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthClientInfoAdd.resx">
+      <DependentUpon>AltHealthClientInfoAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthClientInfoDisplay.resx">
+      <DependentUpon>AltHealthClientInfoDisplay.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltHealthHome.resx">
       <DependentUpon>AltHealthHome.vb</DependentUpon>
     </EmbeddedResource>
@@ -133,8 +175,20 @@
     <EmbeddedResource Include="AltHealthSupplementInfo.resx">
       <DependentUpon>AltHealthSupplementInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthSupplementInfoAdd.resx">
+      <DependentUpon>AltHealthSupplementInfoAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthSupplementInfoDisplay.resx">
+      <DependentUpon>AltHealthSupplementInfoDisplay.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltHealthSupplierInfo.resx">
       <DependentUpon>AltHealthSupplierInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthSupplierInfoAdd.resx">
+      <DependentUpon>AltHealthSupplierInfoAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthSupplierInfoDisplay.resx">
+      <DependentUpon>AltHealthSupplierInfoDisplay.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

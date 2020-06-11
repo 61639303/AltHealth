@@ -1,4 +1,0 @@
-﻿Module CommonFunctions
-
-
-End Module

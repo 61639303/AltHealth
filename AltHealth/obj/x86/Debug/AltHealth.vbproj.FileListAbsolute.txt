@@ -19,3 +19,9 @@ C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthReporting.resources
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplementInfo.resources
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplierInfo.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthClientInfoDisplay.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthClientInfoAdd.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplementInfoAdd.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplementInfoDisplay.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplierInfoAdd.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplierInfoDisplay.resources
