@@ -22,7 +22,6 @@ Partial Class AltHealthSupplementInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AltHealthSupplementInfo))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.DataGridViewSupplementInfo = New System.Windows.Forms.DataGridView()
@@ -39,7 +38,7 @@ Partial Class AltHealthSupplementInfo
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label1.Location = New System.Drawing.Point(237, 9)
+        Me.Label1.Location = New System.Drawing.Point(302, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(518, 54)
         Me.Label1.TabIndex = 5
@@ -51,9 +50,9 @@ Partial Class AltHealthSupplementInfo
         Me.btnExit.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnExit.Location = New System.Drawing.Point(12, 548)
+        Me.btnExit.Location = New System.Drawing.Point(23, 572)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(177, 76)
+        Me.btnExit.Size = New System.Drawing.Size(142, 55)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Close"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -72,9 +71,9 @@ Partial Class AltHealthSupplementInfo
         Me.btnNewSupplement.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnNewSupplement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnNewSupplement.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnNewSupplement.Location = New System.Drawing.Point(12, 214)
+        Me.btnNewSupplement.Location = New System.Drawing.Point(23, 206)
         Me.btnNewSupplement.Name = "btnNewSupplement"
-        Me.btnNewSupplement.Size = New System.Drawing.Size(177, 76)
+        Me.btnNewSupplement.Size = New System.Drawing.Size(142, 55)
         Me.btnNewSupplement.TabIndex = 8
         Me.btnNewSupplement.Text = "New Supplement"
         Me.btnNewSupplement.UseVisualStyleBackColor = False
@@ -93,7 +92,7 @@ Partial Class AltHealthSupplementInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.AltHealth.My.Resources.Resources._61639303_Logo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(885, 647)
         Me.Controls.Add(Me.lblHelp)

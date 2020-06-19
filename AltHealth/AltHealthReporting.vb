@@ -94,7 +94,7 @@ Public Class AltHealthReporting
 
     Private Sub btnClientContact_Click(sender As System.Object, e As System.EventArgs) Handles btnClientContact.Click
         Chart1.Hide()
-        Dim adapter As New SqlDataAdapter("select Client_id as 'CLIENT' , C_Tel_H as 'HOME', C_Tel_W as 'WORK' , C_Tel_C as 'CELL', C_Email as 'EMAIL' from tblClientInfo where C_Email = '' and C_Tel_C =''", connection)
+        Dim adapter As New SqlDataAdapter("select Client_id as 'CLIENT' , C_Tel_H as 'HOME', C_Tel_W as 'WORK' , C_Tel_C as 'CELL', C_Email as 'EMAIL' from tblClientInfo where NULLIF(C_TEL_C,'') IS NULL AND NULLIF(C_EMAIL,'') IS NULL", connection)
         Dim table As New DataTable()
         adapter.Fill(table)
         DataGridViewReport.DataSource = table

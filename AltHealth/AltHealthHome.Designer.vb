@@ -22,13 +22,14 @@ Partial Class AltHealthHome
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AltHealthHome))
         Me.btnClientInfo = New System.Windows.Forms.Button()
         Me.btnSupplierInfo = New System.Windows.Forms.Button()
         Me.btnSupplementInfo = New System.Windows.Forms.Button()
         Me.btnReporting = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnInvoices = New System.Windows.Forms.Button()
+        Me.btnCart = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnClientInfo
@@ -36,9 +37,9 @@ Partial Class AltHealthHome
         Me.btnClientInfo.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnClientInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnClientInfo.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnClientInfo.Location = New System.Drawing.Point(12, 214)
+        Me.btnClientInfo.Location = New System.Drawing.Point(23, 206)
         Me.btnClientInfo.Name = "btnClientInfo"
-        Me.btnClientInfo.Size = New System.Drawing.Size(177, 78)
+        Me.btnClientInfo.Size = New System.Drawing.Size(142, 55)
         Me.btnClientInfo.TabIndex = 0
         Me.btnClientInfo.Text = "Client Information"
         Me.btnClientInfo.UseVisualStyleBackColor = True
@@ -48,9 +49,9 @@ Partial Class AltHealthHome
         Me.btnSupplierInfo.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnSupplierInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnSupplierInfo.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnSupplierInfo.Location = New System.Drawing.Point(12, 298)
+        Me.btnSupplierInfo.Location = New System.Drawing.Point(23, 267)
         Me.btnSupplierInfo.Name = "btnSupplierInfo"
-        Me.btnSupplierInfo.Size = New System.Drawing.Size(177, 78)
+        Me.btnSupplierInfo.Size = New System.Drawing.Size(142, 55)
         Me.btnSupplierInfo.TabIndex = 1
         Me.btnSupplierInfo.Text = "Supplier Information"
         Me.btnSupplierInfo.UseVisualStyleBackColor = True
@@ -60,9 +61,9 @@ Partial Class AltHealthHome
         Me.btnSupplementInfo.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnSupplementInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnSupplementInfo.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnSupplementInfo.Location = New System.Drawing.Point(12, 381)
+        Me.btnSupplementInfo.Location = New System.Drawing.Point(23, 328)
         Me.btnSupplementInfo.Name = "btnSupplementInfo"
-        Me.btnSupplementInfo.Size = New System.Drawing.Size(177, 78)
+        Me.btnSupplementInfo.Size = New System.Drawing.Size(142, 55)
         Me.btnSupplementInfo.TabIndex = 2
         Me.btnSupplementInfo.Text = "Supplement Information"
         Me.btnSupplementInfo.UseVisualStyleBackColor = True
@@ -72,9 +73,9 @@ Partial Class AltHealthHome
         Me.btnReporting.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnReporting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnReporting.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnReporting.Location = New System.Drawing.Point(12, 464)
+        Me.btnReporting.Location = New System.Drawing.Point(23, 389)
         Me.btnReporting.Name = "btnReporting"
-        Me.btnReporting.Size = New System.Drawing.Size(177, 78)
+        Me.btnReporting.Size = New System.Drawing.Size(142, 55)
         Me.btnReporting.TabIndex = 3
         Me.btnReporting.Text = "Reporting"
         Me.btnReporting.UseVisualStyleBackColor = True
@@ -84,9 +85,9 @@ Partial Class AltHealthHome
         Me.btnExit.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnExit.Location = New System.Drawing.Point(12, 548)
+        Me.btnExit.Location = New System.Drawing.Point(23, 572)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(177, 76)
+        Me.btnExit.Size = New System.Drawing.Size(142, 55)
         Me.btnExit.TabIndex = 4
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -100,13 +101,34 @@ Partial Class AltHealthHome
         Me.Label1.TabIndex = 5
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'btnInvoices
+        '
+        Me.btnInvoices.Location = New System.Drawing.Point(23, 451)
+        Me.btnInvoices.Name = "btnInvoices"
+        Me.btnInvoices.Size = New System.Drawing.Size(142, 55)
+        Me.btnInvoices.TabIndex = 6
+        Me.btnInvoices.Text = "Invoices"
+        Me.btnInvoices.UseVisualStyleBackColor = True
+        '
+        'btnCart
+        '
+        Me.btnCart.Location = New System.Drawing.Point(785, 12)
+        Me.btnCart.Name = "btnCart"
+        Me.btnCart.Size = New System.Drawing.Size(88, 61)
+        Me.btnCart.TabIndex = 7
+        Me.btnCart.Text = "Shopping Cart"
+        Me.btnCart.UseVisualStyleBackColor = True
+        '
         'AltHealthHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
+        Me.BackgroundImage = Global.AltHealth.My.Resources.Resources._61639303_Logo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(885, 647)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnCart)
+        Me.Controls.Add(Me.btnInvoices)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnReporting)
@@ -116,6 +138,7 @@ Partial Class AltHealthHome
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AltHealthHome"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AltHealth Home"
@@ -129,5 +152,7 @@ Partial Class AltHealthHome
     Friend WithEvents btnReporting As System.Windows.Forms.Button
     Friend WithEvents btnExit As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents btnInvoices As System.Windows.Forms.Button
+    Friend WithEvents btnCart As System.Windows.Forms.Button
 
 End Class

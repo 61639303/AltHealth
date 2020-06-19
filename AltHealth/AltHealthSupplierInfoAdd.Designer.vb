@@ -23,37 +23,37 @@ Partial Class AltHealthSupplierInfoAdd
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBoxTel = New System.Windows.Forms.MaskedTextBox()
+        Me.TextBoxType = New System.Windows.Forms.TextBox()
+        Me.TextBoxCode = New System.Windows.Forms.TextBox()
+        Me.TextBoxBankNr = New System.Windows.Forms.TextBox()
+        Me.TextBoxBank = New System.Windows.Forms.TextBox()
+        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
+        Me.TextBoxContact = New System.Windows.Forms.TextBox()
+        Me.TextBoxSupplierID = New System.Windows.Forms.TextBox()
+        Me.lblType = New System.Windows.Forms.Label()
+        Me.lblBankNr = New System.Windows.Forms.Label()
+        Me.lblCode = New System.Windows.Forms.Label()
+        Me.lblBank = New System.Windows.Forms.Label()
+        Me.lblEmail = New System.Windows.Forms.Label()
+        Me.lblTel = New System.Windows.Forms.Label()
+        Me.lblContact = New System.Windows.Forms.Label()
+        Me.lblSupplerID = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.lblSupplerID = New System.Windows.Forms.Label()
-        Me.lblContact = New System.Windows.Forms.Label()
-        Me.lblTel = New System.Windows.Forms.Label()
-        Me.lblEmail = New System.Windows.Forms.Label()
-        Me.lblBank = New System.Windows.Forms.Label()
-        Me.lblCode = New System.Windows.Forms.Label()
-        Me.lblBankNr = New System.Windows.Forms.Label()
-        Me.lblType = New System.Windows.Forms.Label()
-        Me.TextBoxSupplerID = New System.Windows.Forms.TextBox()
-        Me.TextBoxContact = New System.Windows.Forms.TextBox()
-        Me.TextBoxTel = New System.Windows.Forms.TextBox()
-        Me.TextBoxEmail = New System.Windows.Forms.TextBox()
-        Me.TextBoxBank = New System.Windows.Forms.TextBox()
-        Me.TextBoxBankNr = New System.Windows.Forms.TextBox()
-        Me.TextBoxCode = New System.Windows.Forms.TextBox()
-        Me.TextBoxType = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBoxTel)
         Me.GroupBox1.Controls.Add(Me.TextBoxType)
         Me.GroupBox1.Controls.Add(Me.TextBoxCode)
         Me.GroupBox1.Controls.Add(Me.TextBoxBankNr)
         Me.GroupBox1.Controls.Add(Me.TextBoxBank)
         Me.GroupBox1.Controls.Add(Me.TextBoxEmail)
-        Me.GroupBox1.Controls.Add(Me.TextBoxTel)
         Me.GroupBox1.Controls.Add(Me.TextBoxContact)
-        Me.GroupBox1.Controls.Add(Me.TextBoxSupplerID)
+        Me.GroupBox1.Controls.Add(Me.TextBoxSupplierID)
         Me.GroupBox1.Controls.Add(Me.lblType)
         Me.GroupBox1.Controls.Add(Me.lblBankNr)
         Me.GroupBox1.Controls.Add(Me.lblCode)
@@ -69,6 +69,151 @@ Partial Class AltHealthSupplierInfoAdd
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Supplier Information"
+        '
+        'TextBoxTel
+        '
+        Me.TextBoxTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxTel.Location = New System.Drawing.Point(170, 98)
+        Me.TextBoxTel.Mask = "(999)-(999)-(999)"
+        Me.TextBoxTel.Name = "TextBoxTel"
+        Me.TextBoxTel.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxTel.TabIndex = 16
+        '
+        'TextBoxType
+        '
+        Me.TextBoxType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxType.Location = New System.Drawing.Point(170, 282)
+        Me.TextBoxType.Name = "TextBoxType"
+        Me.TextBoxType.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxType.TabIndex = 15
+        '
+        'TextBoxCode
+        '
+        Me.TextBoxCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCode.Location = New System.Drawing.Point(170, 209)
+        Me.TextBoxCode.Name = "TextBoxCode"
+        Me.TextBoxCode.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxCode.TabIndex = 14
+        '
+        'TextBoxBankNr
+        '
+        Me.TextBoxBankNr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxBankNr.Location = New System.Drawing.Point(170, 244)
+        Me.TextBoxBankNr.Name = "TextBoxBankNr"
+        Me.TextBoxBankNr.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxBankNr.TabIndex = 14
+        '
+        'TextBoxBank
+        '
+        Me.TextBoxBank.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxBank.Location = New System.Drawing.Point(170, 174)
+        Me.TextBoxBank.Name = "TextBoxBank"
+        Me.TextBoxBank.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxBank.TabIndex = 13
+        '
+        'TextBoxEmail
+        '
+        Me.TextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxEmail.Location = New System.Drawing.Point(170, 139)
+        Me.TextBoxEmail.Name = "TextBoxEmail"
+        Me.TextBoxEmail.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxEmail.TabIndex = 11
+        '
+        'TextBoxContact
+        '
+        Me.TextBoxContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxContact.Location = New System.Drawing.Point(170, 68)
+        Me.TextBoxContact.Name = "TextBoxContact"
+        Me.TextBoxContact.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxContact.TabIndex = 9
+        '
+        'TextBoxSupplierID
+        '
+        Me.TextBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxSupplierID.Location = New System.Drawing.Point(170, 31)
+        Me.TextBoxSupplierID.Name = "TextBoxSupplierID"
+        Me.TextBoxSupplierID.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxSupplierID.TabIndex = 8
+        '
+        'lblType
+        '
+        Me.lblType.AutoSize = True
+        Me.lblType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblType.Location = New System.Drawing.Point(26, 289)
+        Me.lblType.Name = "lblType"
+        Me.lblType.Size = New System.Drawing.Size(74, 13)
+        Me.lblType.TabIndex = 7
+        Me.lblType.Text = "Account Type"
+        '
+        'lblBankNr
+        '
+        Me.lblBankNr.AutoSize = True
+        Me.lblBankNr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBankNr.Location = New System.Drawing.Point(26, 251)
+        Me.lblBankNr.Name = "lblBankNr"
+        Me.lblBankNr.Size = New System.Drawing.Size(61, 13)
+        Me.lblBankNr.TabIndex = 6
+        Me.lblBankNr.Text = "Account Nr"
+        '
+        'lblCode
+        '
+        Me.lblCode.AutoSize = True
+        Me.lblCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCode.Location = New System.Drawing.Point(26, 216)
+        Me.lblCode.Name = "lblCode"
+        Me.lblCode.Size = New System.Drawing.Size(60, 13)
+        Me.lblCode.TabIndex = 5
+        Me.lblCode.Text = "Bank Code"
+        '
+        'lblBank
+        '
+        Me.lblBank.AutoSize = True
+        Me.lblBank.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBank.Location = New System.Drawing.Point(26, 181)
+        Me.lblBank.Name = "lblBank"
+        Me.lblBank.Size = New System.Drawing.Size(32, 13)
+        Me.lblBank.TabIndex = 4
+        Me.lblBank.Text = "Bank"
+        '
+        'lblEmail
+        '
+        Me.lblEmail.AutoSize = True
+        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblEmail.Location = New System.Drawing.Point(26, 146)
+        Me.lblEmail.Name = "lblEmail"
+        Me.lblEmail.Size = New System.Drawing.Size(32, 13)
+        Me.lblEmail.TabIndex = 3
+        Me.lblEmail.Text = "Email"
+        '
+        'lblTel
+        '
+        Me.lblTel.AutoSize = True
+        Me.lblTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTel.Location = New System.Drawing.Point(26, 106)
+        Me.lblTel.Name = "lblTel"
+        Me.lblTel.Size = New System.Drawing.Size(72, 13)
+        Me.lblTel.TabIndex = 2
+        Me.lblTel.Text = "Telephone Nr"
+        '
+        'lblContact
+        '
+        Me.lblContact.AutoSize = True
+        Me.lblContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblContact.Location = New System.Drawing.Point(26, 75)
+        Me.lblContact.Name = "lblContact"
+        Me.lblContact.Size = New System.Drawing.Size(80, 13)
+        Me.lblContact.TabIndex = 1
+        Me.lblContact.Text = "Contact Person"
+        '
+        'lblSupplerID
+        '
+        Me.lblSupplerID.AutoSize = True
+        Me.lblSupplerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSupplerID.Location = New System.Drawing.Point(26, 38)
+        Me.lblSupplerID.Name = "lblSupplerID"
+        Me.lblSupplerID.Size = New System.Drawing.Size(59, 13)
+        Me.lblSupplerID.TabIndex = 0
+        Me.lblSupplerID.Text = "Supplier ID"
         '
         'btnOK
         '
@@ -87,150 +232,6 @@ Partial Class AltHealthSupplierInfoAdd
         Me.btnCancel.TabIndex = 2
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'lblSupplerID
-        '
-        Me.lblSupplerID.AutoSize = True
-        Me.lblSupplerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSupplerID.Location = New System.Drawing.Point(26, 38)
-        Me.lblSupplerID.Name = "lblSupplerID"
-        Me.lblSupplerID.Size = New System.Drawing.Size(59, 13)
-        Me.lblSupplerID.TabIndex = 0
-        Me.lblSupplerID.Text = "Supplier ID"
-        '
-        'lblContact
-        '
-        Me.lblContact.AutoSize = True
-        Me.lblContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblContact.Location = New System.Drawing.Point(26, 75)
-        Me.lblContact.Name = "lblContact"
-        Me.lblContact.Size = New System.Drawing.Size(80, 13)
-        Me.lblContact.TabIndex = 1
-        Me.lblContact.Text = "Contact Person"
-        '
-        'lblTel
-        '
-        Me.lblTel.AutoSize = True
-        Me.lblTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTel.Location = New System.Drawing.Point(26, 106)
-        Me.lblTel.Name = "lblTel"
-        Me.lblTel.Size = New System.Drawing.Size(72, 13)
-        Me.lblTel.TabIndex = 2
-        Me.lblTel.Text = "Telephone Nr"
-        '
-        'lblEmail
-        '
-        Me.lblEmail.AutoSize = True
-        Me.lblEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEmail.Location = New System.Drawing.Point(26, 146)
-        Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(32, 13)
-        Me.lblEmail.TabIndex = 3
-        Me.lblEmail.Text = "Email"
-        '
-        'lblBank
-        '
-        Me.lblBank.AutoSize = True
-        Me.lblBank.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBank.Location = New System.Drawing.Point(26, 181)
-        Me.lblBank.Name = "lblBank"
-        Me.lblBank.Size = New System.Drawing.Size(32, 13)
-        Me.lblBank.TabIndex = 4
-        Me.lblBank.Text = "Bank"
-        '
-        'lblCode
-        '
-        Me.lblCode.AutoSize = True
-        Me.lblCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCode.Location = New System.Drawing.Point(26, 216)
-        Me.lblCode.Name = "lblCode"
-        Me.lblCode.Size = New System.Drawing.Size(60, 13)
-        Me.lblCode.TabIndex = 5
-        Me.lblCode.Text = "Bank Code"
-        '
-        'lblBankNr
-        '
-        Me.lblBankNr.AutoSize = True
-        Me.lblBankNr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBankNr.Location = New System.Drawing.Point(26, 251)
-        Me.lblBankNr.Name = "lblBankNr"
-        Me.lblBankNr.Size = New System.Drawing.Size(61, 13)
-        Me.lblBankNr.TabIndex = 6
-        Me.lblBankNr.Text = "Account Nr"
-        '
-        'lblType
-        '
-        Me.lblType.AutoSize = True
-        Me.lblType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblType.Location = New System.Drawing.Point(26, 289)
-        Me.lblType.Name = "lblType"
-        Me.lblType.Size = New System.Drawing.Size(74, 13)
-        Me.lblType.TabIndex = 7
-        Me.lblType.Text = "Account Type"
-        '
-        'TextBoxSupplerID
-        '
-        Me.TextBoxSupplerID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxSupplerID.Location = New System.Drawing.Point(170, 31)
-        Me.TextBoxSupplerID.Name = "TextBoxSupplerID"
-        Me.TextBoxSupplerID.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxSupplerID.TabIndex = 8
-        '
-        'TextBoxContact
-        '
-        Me.TextBoxContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxContact.Location = New System.Drawing.Point(170, 68)
-        Me.TextBoxContact.Name = "TextBoxContact"
-        Me.TextBoxContact.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxContact.TabIndex = 9
-        '
-        'TextBoxTel
-        '
-        Me.TextBoxTel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxTel.Location = New System.Drawing.Point(170, 99)
-        Me.TextBoxTel.Name = "TextBoxTel"
-        Me.TextBoxTel.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxTel.TabIndex = 10
-        '
-        'TextBoxEmail
-        '
-        Me.TextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxEmail.Location = New System.Drawing.Point(168, 139)
-        Me.TextBoxEmail.Name = "TextBoxEmail"
-        Me.TextBoxEmail.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxEmail.TabIndex = 11
-        '
-        'TextBoxBank
-        '
-        Me.TextBoxBank.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxBank.Location = New System.Drawing.Point(170, 174)
-        Me.TextBoxBank.Name = "TextBoxBank"
-        Me.TextBoxBank.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxBank.TabIndex = 13
-        '
-        'TextBoxBankNr
-        '
-        Me.TextBoxBankNr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxBankNr.Location = New System.Drawing.Point(170, 244)
-        Me.TextBoxBankNr.Name = "TextBoxBankNr"
-        Me.TextBoxBankNr.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxBankNr.TabIndex = 14
-        '
-        'TextBoxCode
-        '
-        Me.TextBoxCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCode.Location = New System.Drawing.Point(170, 209)
-        Me.TextBoxCode.Name = "TextBoxCode"
-        Me.TextBoxCode.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxCode.TabIndex = 14
-        '
-        'TextBoxType
-        '
-        Me.TextBoxType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxType.Location = New System.Drawing.Point(170, 282)
-        Me.TextBoxType.Name = "TextBoxType"
-        Me.TextBoxType.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxType.TabIndex = 15
         '
         'AltHealthSupplierInfoAdd
         '
@@ -258,9 +259,8 @@ Partial Class AltHealthSupplierInfoAdd
     Friend WithEvents TextBoxBankNr As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxBank As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxEmail As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxTel As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxContact As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxSupplerID As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxSupplierID As System.Windows.Forms.TextBox
     Friend WithEvents lblType As System.Windows.Forms.Label
     Friend WithEvents lblBankNr As System.Windows.Forms.Label
     Friend WithEvents lblCode As System.Windows.Forms.Label
@@ -271,4 +271,5 @@ Partial Class AltHealthSupplierInfoAdd
     Friend WithEvents lblSupplerID As System.Windows.Forms.Label
     Friend WithEvents btnOK As System.Windows.Forms.Button
     Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents TextBoxTel As System.Windows.Forms.MaskedTextBox
 End Class

@@ -98,10 +98,22 @@
       <DependentUpon>AltHealthHome.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AltHealthInvoices.Designer.vb">
+      <DependentUpon>AltHealthInvoices.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthInvoices.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AltHealthReporting.Designer.vb">
       <DependentUpon>AltHealthReporting.vb</DependentUpon>
     </Compile>
     <Compile Include="AltHealthReporting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltHealthShoppingCart.Designer.vb">
+      <DependentUpon>AltHealthShoppingCart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthShoppingCart.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AltHealthSupplementInfo.Designer.vb">
@@ -169,8 +181,14 @@
     <EmbeddedResource Include="AltHealthHome.resx">
       <DependentUpon>AltHealthHome.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthInvoices.resx">
+      <DependentUpon>AltHealthInvoices.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltHealthReporting.resx">
       <DependentUpon>AltHealthReporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthShoppingCart.resx">
+      <DependentUpon>AltHealthShoppingCart.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AltHealthSupplementInfo.resx">
       <DependentUpon>AltHealthSupplementInfo.vb</DependentUpon>
@@ -207,6 +225,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61639303_Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

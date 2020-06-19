@@ -20,6 +20,7 @@ Public Class AltHealthClientInfo
     Private Sub btnNewClient_Click(sender As System.Object, e As System.EventArgs) Handles btnNewClient.Click
         Dim form = New AltHealthClientInfoAdd()
         form.ShowDialog()
+       
     End Sub
 
 
@@ -39,4 +40,6 @@ Public Class AltHealthClientInfo
 
         form.ShowDialog()
     End Sub
+
+ 
 End Class

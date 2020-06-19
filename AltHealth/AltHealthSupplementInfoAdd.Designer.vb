@@ -24,7 +24,6 @@ Partial Class AltHealthSupplementInfoAdd
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBoxNapppi = New System.Windows.Forms.TextBox()
-        Me.TextBoxSupplierID = New System.Windows.Forms.TextBox()
         Me.TextBoxMinLvl = New System.Windows.Forms.TextBox()
         Me.TextBoxCostInc = New System.Windows.Forms.TextBox()
         Me.TextBoxCurLvl = New System.Windows.Forms.TextBox()
@@ -41,13 +40,14 @@ Partial Class AltHealthSupplementInfoAdd
         Me.lblSupplementID = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.ComboBoxSupplierID = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.ComboBoxSupplierID)
         Me.GroupBox1.Controls.Add(Me.TextBoxNapppi)
-        Me.GroupBox1.Controls.Add(Me.TextBoxSupplierID)
         Me.GroupBox1.Controls.Add(Me.TextBoxMinLvl)
         Me.GroupBox1.Controls.Add(Me.TextBoxCostInc)
         Me.GroupBox1.Controls.Add(Me.TextBoxCurLvl)
@@ -78,14 +78,6 @@ Partial Class AltHealthSupplementInfoAdd
         Me.TextBoxNapppi.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxNapppi.TabIndex = 14
         '
-        'TextBoxSupplierID
-        '
-        Me.TextBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxSupplierID.Location = New System.Drawing.Point(167, 287)
-        Me.TextBoxSupplierID.Name = "TextBoxSupplierID"
-        Me.TextBoxSupplierID.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxSupplierID.TabIndex = 13
-        '
         'TextBoxMinLvl
         '
         Me.TextBoxMinLvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -96,6 +88,7 @@ Partial Class AltHealthSupplementInfoAdd
         '
         'TextBoxCostInc
         '
+        Me.TextBoxCostInc.Enabled = False
         Me.TextBoxCostInc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxCostInc.Location = New System.Drawing.Point(167, 147)
         Me.TextBoxCostInc.Name = "TextBoxCostInc"
@@ -232,6 +225,16 @@ Partial Class AltHealthSupplementInfoAdd
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
+        'ComboBoxSupplierID
+        '
+        Me.ComboBoxSupplierID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxSupplierID.FormattingEnabled = True
+        Me.ComboBoxSupplierID.Location = New System.Drawing.Point(168, 290)
+        Me.ComboBoxSupplierID.Name = "ComboBoxSupplierID"
+        Me.ComboBoxSupplierID.Size = New System.Drawing.Size(203, 21)
+        Me.ComboBoxSupplierID.TabIndex = 15
+        '
         'AltHealthSupplementInfoAdd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -265,10 +268,10 @@ Partial Class AltHealthSupplementInfoAdd
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents TextBoxSupplementID As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxNapppi As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxSupplierID As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxMinLvl As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxCostInc As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxCurLvl As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxCostEx As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxDesc As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBoxSupplierID As System.Windows.Forms.ComboBox
 End Class

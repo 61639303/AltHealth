@@ -27,4 +27,13 @@
         End If
     End Sub
 
+    Private Sub btnInvoices_Click(sender As System.Object, e As System.EventArgs) Handles btnInvoices.Click
+        Dim form = New AltHealthInvoices()
+        form.ShowDialog()
+    End Sub
+
+    Private Sub btnCart_Click(sender As System.Object, e As System.EventArgs) Handles btnCart.Click
+        Dim form = New AltHealthShoppingCart()
+        form.ShowDialog()
+    End Sub
 End Class

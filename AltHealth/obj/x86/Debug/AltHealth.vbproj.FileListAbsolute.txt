@@ -25,3 +25,5 @@ C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplementInfoDisplay.resources
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplierInfoAdd.resources
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplierInfoDisplay.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthInvoices.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthShoppingCart.resources

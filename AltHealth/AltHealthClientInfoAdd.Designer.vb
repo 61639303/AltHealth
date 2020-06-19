@@ -23,11 +23,11 @@ Partial Class AltHealthClientInfoAdd
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBoxClientInfo = New System.Windows.Forms.GroupBox()
-        Me.TextBoxReference = New System.Windows.Forms.TextBox()
+        Me.TextBoxCell = New System.Windows.Forms.MaskedTextBox()
+        Me.TextBoxWork = New System.Windows.Forms.MaskedTextBox()
+        Me.TextBoxHome = New System.Windows.Forms.MaskedTextBox()
+        Me.ComboBoxReference = New System.Windows.Forms.ComboBox()
         Me.TextBoxEmail = New System.Windows.Forms.TextBox()
-        Me.TextBoxCell = New System.Windows.Forms.TextBox()
-        Me.TextBoxWork = New System.Windows.Forms.TextBox()
-        Me.TextBoxHome = New System.Windows.Forms.TextBox()
         Me.TextBoxCode = New System.Windows.Forms.TextBox()
         Me.TextBoxAddress = New System.Windows.Forms.TextBox()
         Me.TextBoxSurname = New System.Windows.Forms.TextBox()
@@ -50,11 +50,11 @@ Partial Class AltHealthClientInfoAdd
         '
         'GroupBoxClientInfo
         '
-        Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxReference)
-        Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxEmail)
         Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxCell)
         Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxWork)
         Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxHome)
+        Me.GroupBoxClientInfo.Controls.Add(Me.ComboBoxReference)
+        Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxEmail)
         Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxCode)
         Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxAddress)
         Me.GroupBoxClientInfo.Controls.Add(Me.TextBoxSurname)
@@ -78,13 +78,42 @@ Partial Class AltHealthClientInfoAdd
         Me.GroupBoxClientInfo.TabStop = False
         Me.GroupBoxClientInfo.Text = "Client Information"
         '
-        'TextBoxReference
+        'TextBoxCell
         '
-        Me.TextBoxReference.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxReference.Location = New System.Drawing.Point(145, 358)
-        Me.TextBoxReference.Name = "TextBoxReference"
-        Me.TextBoxReference.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxReference.TabIndex = 19
+        Me.TextBoxCell.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCell.Location = New System.Drawing.Point(145, 282)
+        Me.TextBoxCell.Mask = "(999)-(999)-(999)"
+        Me.TextBoxCell.Name = "TextBoxCell"
+        Me.TextBoxCell.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxCell.TabIndex = 22
+        '
+        'TextBoxWork
+        '
+        Me.TextBoxWork.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxWork.Location = New System.Drawing.Point(145, 246)
+        Me.TextBoxWork.Mask = "(999)-(999)-(999)"
+        Me.TextBoxWork.Name = "TextBoxWork"
+        Me.TextBoxWork.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxWork.TabIndex = 21
+        '
+        'TextBoxHome
+        '
+        Me.TextBoxHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxHome.Location = New System.Drawing.Point(145, 209)
+        Me.TextBoxHome.Mask = "(999)-(999)-(999)"
+        Me.TextBoxHome.Name = "TextBoxHome"
+        Me.TextBoxHome.Size = New System.Drawing.Size(231, 20)
+        Me.TextBoxHome.TabIndex = 20
+        '
+        'ComboBoxReference
+        '
+        Me.ComboBoxReference.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxReference.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxReference.FormattingEnabled = True
+        Me.ComboBoxReference.Location = New System.Drawing.Point(145, 352)
+        Me.ComboBoxReference.Name = "ComboBoxReference"
+        Me.ComboBoxReference.Size = New System.Drawing.Size(109, 21)
+        Me.ComboBoxReference.TabIndex = 19
         '
         'TextBoxEmail
         '
@@ -93,30 +122,6 @@ Partial Class AltHealthClientInfoAdd
         Me.TextBoxEmail.Name = "TextBoxEmail"
         Me.TextBoxEmail.Size = New System.Drawing.Size(231, 20)
         Me.TextBoxEmail.TabIndex = 18
-        '
-        'TextBoxCell
-        '
-        Me.TextBoxCell.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCell.Location = New System.Drawing.Point(145, 282)
-        Me.TextBoxCell.Name = "TextBoxCell"
-        Me.TextBoxCell.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxCell.TabIndex = 17
-        '
-        'TextBoxWork
-        '
-        Me.TextBoxWork.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxWork.Location = New System.Drawing.Point(145, 246)
-        Me.TextBoxWork.Name = "TextBoxWork"
-        Me.TextBoxWork.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxWork.TabIndex = 16
-        '
-        'TextBoxHome
-        '
-        Me.TextBoxHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxHome.Location = New System.Drawing.Point(145, 210)
-        Me.TextBoxHome.Name = "TextBoxHome"
-        Me.TextBoxHome.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxHome.TabIndex = 15
         '
         'TextBoxCode
         '
@@ -297,11 +302,7 @@ Partial Class AltHealthClientInfoAdd
 
     End Sub
     Friend WithEvents GroupBoxClientInfo As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBoxReference As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxEmail As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxCell As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxWork As System.Windows.Forms.TextBox
-    Friend WithEvents TextBoxHome As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxCode As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxAddress As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxSurname As System.Windows.Forms.TextBox
@@ -319,4 +320,8 @@ Partial Class AltHealthClientInfoAdd
     Friend WithEvents lblHome As System.Windows.Forms.Label
     Friend WithEvents btnCancel As System.Windows.Forms.Button
     Friend WithEvents btnOK As System.Windows.Forms.Button
+    Friend WithEvents ComboBoxReference As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBoxHome As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents TextBoxCell As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents TextBoxWork As System.Windows.Forms.MaskedTextBox
 End Class

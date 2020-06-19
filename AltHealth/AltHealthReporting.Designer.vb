@@ -60,9 +60,9 @@ Partial Class AltHealthReporting
         Me.btnExit.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnExit.Location = New System.Drawing.Point(12, 548)
+        Me.btnExit.Location = New System.Drawing.Point(23, 572)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(177, 76)
+        Me.btnExit.Size = New System.Drawing.Size(142, 55)
         Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Close"
         Me.btnExit.UseVisualStyleBackColor = False
@@ -185,6 +185,7 @@ Partial Class AltHealthReporting
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "AltHealthReporting"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AltHealth Reporting"
