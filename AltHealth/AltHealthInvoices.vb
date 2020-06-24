@@ -20,9 +20,10 @@ Public Class AltHealthInvoices
         lblClientWork.Text = ""
         lblClientCell.Text = ""
         lblClientEmail.Text = ""
-
+        txtBoxInvoiceNumber.Clear()
+        txtBoxInvoiceNumber.Focus()
+        txtBoxInvoiceNumber.Select(3, 1)
     End Sub
-
 
     Private Sub Populate_Invoice(ByVal Inv_nr As String)
 
@@ -67,14 +68,27 @@ Public Class AltHealthInvoices
             lblTotalInvoice.Text = total
         Catch ex As Exception
             MessageBox.Show("Invoice Number does not Exist. Please Enter the Correct Invoice Number.", "Invoice Number Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtBoxInvoiceNumber.Clear()
+            txtBoxInvoiceNumber.Select(3, 5)
             txtBoxInvoiceNumber.Focus()
         End Try
     End Sub
 
-    Private Sub btnSearch_Click(sender As System.Object, e As System.EventArgs) Handles btnSearch.Click
-        Dim Inv_Num As String
-        Inv_Num = txtBoxInvoiceNumber.Text
-        Me.Populate_Invoice(Inv_Num)
+
+
+    Private Sub txtBoxInvoiceNumber_KeyDown(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles txtBoxInvoiceNumber.KeyDown
+
+        If e.KeyCode = Keys.Enter Then
+
+            Dim Inv_Num As String
+            Inv_Num = txtBoxInvoiceNumber.Text
+
+            Me.Populate_Invoice(Inv_Num)
+            txtBoxInvoiceNumber.Clear()
+            txtBoxInvoiceNumber.Focus()
+            txtBoxInvoiceNumber.Select(3, 1)
+        End If
     End Sub
+
+
+
 End Class

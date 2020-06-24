@@ -23,6 +23,7 @@ Partial Class AltHealthSupplementInfoAdd
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ComboBoxSupplierID = New System.Windows.Forms.ComboBox()
         Me.TextBoxNapppi = New System.Windows.Forms.TextBox()
         Me.TextBoxMinLvl = New System.Windows.Forms.TextBox()
         Me.TextBoxCostInc = New System.Windows.Forms.TextBox()
@@ -40,7 +41,6 @@ Partial Class AltHealthSupplementInfoAdd
         Me.lblSupplementID = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.ComboBoxSupplierID = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -70,13 +70,23 @@ Partial Class AltHealthSupplementInfoAdd
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Supplement Information"
         '
+        'ComboBoxSupplierID
+        '
+        Me.ComboBoxSupplierID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxSupplierID.FormattingEnabled = True
+        Me.ComboBoxSupplierID.Location = New System.Drawing.Point(168, 290)
+        Me.ComboBoxSupplierID.Name = "ComboBoxSupplierID"
+        Me.ComboBoxSupplierID.Size = New System.Drawing.Size(203, 21)
+        Me.ComboBoxSupplierID.TabIndex = 7
+        '
         'TextBoxNapppi
         '
         Me.TextBoxNapppi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxNapppi.Location = New System.Drawing.Point(167, 252)
         Me.TextBoxNapppi.Name = "TextBoxNapppi"
         Me.TextBoxNapppi.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxNapppi.TabIndex = 14
+        Me.TextBoxNapppi.TabIndex = 6
         '
         'TextBoxMinLvl
         '
@@ -84,7 +94,8 @@ Partial Class AltHealthSupplementInfoAdd
         Me.TextBoxMinLvl.Location = New System.Drawing.Point(167, 182)
         Me.TextBoxMinLvl.Name = "TextBoxMinLvl"
         Me.TextBoxMinLvl.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxMinLvl.TabIndex = 12
+        Me.TextBoxMinLvl.TabIndex = 4
+        Me.TextBoxMinLvl.Text = "0"
         '
         'TextBoxCostInc
         '
@@ -94,6 +105,7 @@ Partial Class AltHealthSupplementInfoAdd
         Me.TextBoxCostInc.Name = "TextBoxCostInc"
         Me.TextBoxCostInc.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxCostInc.TabIndex = 11
+        Me.TextBoxCostInc.Text = "0.00"
         '
         'TextBoxCurLvl
         '
@@ -101,7 +113,8 @@ Partial Class AltHealthSupplementInfoAdd
         Me.TextBoxCurLvl.Location = New System.Drawing.Point(167, 217)
         Me.TextBoxCurLvl.Name = "TextBoxCurLvl"
         Me.TextBoxCurLvl.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxCurLvl.TabIndex = 11
+        Me.TextBoxCurLvl.TabIndex = 5
+        Me.TextBoxCurLvl.Text = "0"
         '
         'TextBoxCostEx
         '
@@ -109,23 +122,26 @@ Partial Class AltHealthSupplementInfoAdd
         Me.TextBoxCostEx.Location = New System.Drawing.Point(167, 107)
         Me.TextBoxCostEx.Name = "TextBoxCostEx"
         Me.TextBoxCostEx.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxCostEx.TabIndex = 10
+        Me.TextBoxCostEx.TabIndex = 3
+        Me.TextBoxCostEx.Text = "0.00"
         '
         'TextBoxDesc
         '
         Me.TextBoxDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxDesc.Location = New System.Drawing.Point(167, 76)
+        Me.TextBoxDesc.MaxLength = 40
         Me.TextBoxDesc.Name = "TextBoxDesc"
         Me.TextBoxDesc.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxDesc.TabIndex = 9
+        Me.TextBoxDesc.TabIndex = 2
         '
         'TextBoxSupplementID
         '
         Me.TextBoxSupplementID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxSupplementID.Location = New System.Drawing.Point(167, 39)
+        Me.TextBoxSupplementID.MaxLength = 20
         Me.TextBoxSupplementID.Name = "TextBoxSupplementID"
         Me.TextBoxSupplementID.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxSupplementID.TabIndex = 8
+        Me.TextBoxSupplementID.TabIndex = 1
         '
         'lblSupplierID
         '
@@ -212,7 +228,7 @@ Partial Class AltHealthSupplementInfoAdd
         Me.btnOK.Location = New System.Drawing.Point(156, 374)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(86, 42)
-        Me.btnOK.TabIndex = 1
+        Me.btnOK.TabIndex = 8
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
         '
@@ -221,19 +237,9 @@ Partial Class AltHealthSupplementInfoAdd
         Me.btnCancel.Location = New System.Drawing.Point(248, 374)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(86, 42)
-        Me.btnCancel.TabIndex = 2
+        Me.btnCancel.TabIndex = 9
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'ComboBoxSupplierID
-        '
-        Me.ComboBoxSupplierID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBoxSupplierID.FormattingEnabled = True
-        Me.ComboBoxSupplierID.Location = New System.Drawing.Point(168, 290)
-        Me.ComboBoxSupplierID.Name = "ComboBoxSupplierID"
-        Me.ComboBoxSupplierID.Size = New System.Drawing.Size(203, 21)
-        Me.ComboBoxSupplierID.TabIndex = 15
         '
         'AltHealthSupplementInfoAdd
         '

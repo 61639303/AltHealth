@@ -83,6 +83,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxType.Location = New System.Drawing.Point(170, 282)
+        Me.TextBoxType.MaxLength = 20
         Me.TextBoxType.Name = "TextBoxType"
         Me.TextBoxType.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxType.TabIndex = 15
@@ -91,6 +92,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxCode.Location = New System.Drawing.Point(170, 209)
+        Me.TextBoxCode.MaxLength = 10
         Me.TextBoxCode.Name = "TextBoxCode"
         Me.TextBoxCode.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxCode.TabIndex = 14
@@ -99,6 +101,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxBankNr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxBankNr.Location = New System.Drawing.Point(170, 244)
+        Me.TextBoxBankNr.MaxLength = 30
         Me.TextBoxBankNr.Name = "TextBoxBankNr"
         Me.TextBoxBankNr.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxBankNr.TabIndex = 14
@@ -107,6 +110,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxBank.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxBank.Location = New System.Drawing.Point(170, 174)
+        Me.TextBoxBank.MaxLength = 30
         Me.TextBoxBank.Name = "TextBoxBank"
         Me.TextBoxBank.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxBank.TabIndex = 13
@@ -115,6 +119,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxEmail.Location = New System.Drawing.Point(170, 139)
+        Me.TextBoxEmail.MaxLength = 50
         Me.TextBoxEmail.Name = "TextBoxEmail"
         Me.TextBoxEmail.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxEmail.TabIndex = 11
@@ -123,6 +128,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxContact.Location = New System.Drawing.Point(170, 68)
+        Me.TextBoxContact.MaxLength = 30
         Me.TextBoxContact.Name = "TextBoxContact"
         Me.TextBoxContact.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxContact.TabIndex = 9
@@ -131,6 +137,7 @@ Partial Class AltHealthSupplierInfoAdd
         '
         Me.TextBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxSupplierID.Location = New System.Drawing.Point(170, 31)
+        Me.TextBoxSupplierID.MaxLength = 15
         Me.TextBoxSupplierID.Name = "TextBoxSupplierID"
         Me.TextBoxSupplierID.Size = New System.Drawing.Size(204, 20)
         Me.TextBoxSupplierID.TabIndex = 8

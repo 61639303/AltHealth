@@ -22,8 +22,12 @@ Partial Class AltHealthInvoices
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.GroupBoxInv = New System.Windows.Forms.GroupBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.lblTotalInvoice = New System.Windows.Forms.Label()
+        Me.DataGridViewInvoiceItems = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.lblInvPaidDate = New System.Windows.Forms.Label()
@@ -46,15 +50,13 @@ Partial Class AltHealthInvoices
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnSearch = New System.Windows.Forms.Button()
         Me.txtBoxInvoiceNumber = New System.Windows.Forms.MaskedTextBox()
-        Me.DataGridViewInvoiceItems = New System.Windows.Forms.DataGridView()
-        Me.lblTotalInvoice = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBoxInv.SuspendLayout()
+        CType(Me.DataGridViewInvoiceItems, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridViewInvoiceItems, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnClose
@@ -62,30 +64,82 @@ Partial Class AltHealthInvoices
         Me.btnClose.Location = New System.Drawing.Point(23, 572)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(142, 55)
-        Me.btnClose.TabIndex = 0
+        Me.btnClose.TabIndex = 1
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
         'GroupBoxInv
         '
+        Me.GroupBoxInv.Controls.Add(Me.Label12)
         Me.GroupBoxInv.Controls.Add(Me.lblTotalInvoice)
         Me.GroupBoxInv.Controls.Add(Me.DataGridViewInvoiceItems)
         Me.GroupBoxInv.Controls.Add(Me.PictureBox1)
         Me.GroupBoxInv.Controls.Add(Me.GroupBox2)
         Me.GroupBoxInv.Controls.Add(Me.GroupBox1)
-        Me.GroupBoxInv.Location = New System.Drawing.Point(224, 66)
+        Me.GroupBoxInv.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxInv.Location = New System.Drawing.Point(246, 66)
         Me.GroupBoxInv.Name = "GroupBoxInv"
-        Me.GroupBoxInv.Size = New System.Drawing.Size(649, 561)
+        Me.GroupBoxInv.Size = New System.Drawing.Size(633, 561)
         Me.GroupBoxInv.TabIndex = 3
         Me.GroupBoxInv.TabStop = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Enabled = False
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(389, 515)
+        Me.Label12.Name = "Label12"
+        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label12.Size = New System.Drawing.Size(68, 29)
+        Me.Label12.TabIndex = 9
+        Me.Label12.Text = "Total"
+        '
+        'lblTotalInvoice
+        '
+        Me.lblTotalInvoice.AutoSize = True
+        Me.lblTotalInvoice.Enabled = False
+        Me.lblTotalInvoice.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalInvoice.Location = New System.Drawing.Point(510, 515)
+        Me.lblTotalInvoice.Name = "lblTotalInvoice"
+        Me.lblTotalInvoice.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblTotalInvoice.Size = New System.Drawing.Size(75, 29)
+        Me.lblTotalInvoice.TabIndex = 8
+        Me.lblTotalInvoice.Text = "R0.00"
+        Me.lblTotalInvoice.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'DataGridViewInvoiceItems
+        '
+        Me.DataGridViewInvoiceItems.AllowUserToAddRows = False
+        Me.DataGridViewInvoiceItems.AllowUserToDeleteRows = False
+        Me.DataGridViewInvoiceItems.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridViewInvoiceItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridViewInvoiceItems.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DataGridViewInvoiceItems.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.DataGridViewInvoiceItems.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised
+        Me.DataGridViewInvoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridViewInvoiceItems.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridViewInvoiceItems.Enabled = False
+        Me.DataGridViewInvoiceItems.Location = New System.Drawing.Point(22, 248)
+        Me.DataGridViewInvoiceItems.Name = "DataGridViewInvoiceItems"
+        Me.DataGridViewInvoiceItems.Size = New System.Drawing.Size(588, 258)
+        Me.DataGridViewInvoiceItems.TabIndex = 7
         '
         'PictureBox1
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Image = Global.AltHealth.My.Resources.Resources._61639303_Logo
-        Me.PictureBox1.Location = New System.Drawing.Point(51, 19)
+        Me.PictureBox1.Location = New System.Drawing.Point(78, 49)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(124, 121)
+        Me.PictureBox1.Size = New System.Drawing.Size(95, 95)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
@@ -96,7 +150,8 @@ Partial Class AltHealthInvoices
         Me.GroupBox2.Controls.Add(Me.lblInvDate)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Location = New System.Drawing.Point(22, 157)
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Location = New System.Drawing.Point(22, 155)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(209, 84)
         Me.GroupBox2.TabIndex = 5
@@ -155,9 +210,10 @@ Partial Class AltHealthInvoices
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(248, 32)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(378, 209)
+        Me.GroupBox1.Size = New System.Drawing.Size(362, 209)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Client Information"
@@ -292,47 +348,32 @@ Partial Class AltHealthInvoices
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label1.Location = New System.Drawing.Point(439, 9)
+        Me.Label1.Location = New System.Drawing.Point(471, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(196, 54)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Invoices"
         '
-        'btnSearch
-        '
-        Me.btnSearch.Location = New System.Drawing.Point(55, 247)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(86, 38)
-        Me.btnSearch.TabIndex = 7
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
         'txtBoxInvoiceNumber
         '
-        Me.txtBoxInvoiceNumber.Location = New System.Drawing.Point(48, 215)
-        Me.txtBoxInvoiceNumber.Mask = "INV999999"
+        Me.txtBoxInvoiceNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBoxInvoiceNumber.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite
+        Me.txtBoxInvoiceNumber.Location = New System.Drawing.Point(42, 229)
+        Me.txtBoxInvoiceNumber.Mask = "INV99999"
         Me.txtBoxInvoiceNumber.Name = "txtBoxInvoiceNumber"
-        Me.txtBoxInvoiceNumber.Size = New System.Drawing.Size(100, 20)
-        Me.txtBoxInvoiceNumber.TabIndex = 8
+        Me.txtBoxInvoiceNumber.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.txtBoxInvoiceNumber.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.txtBoxInvoiceNumber.Size = New System.Drawing.Size(106, 31)
+        Me.txtBoxInvoiceNumber.TabIndex = 0
         '
-        'DataGridViewInvoiceItems
+        'Label11
         '
-        Me.DataGridViewInvoiceItems.BackgroundColor = System.Drawing.SystemColors.Control
-        Me.DataGridViewInvoiceItems.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.DataGridViewInvoiceItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewInvoiceItems.Location = New System.Drawing.Point(22, 248)
-        Me.DataGridViewInvoiceItems.Name = "DataGridViewInvoiceItems"
-        Me.DataGridViewInvoiceItems.Size = New System.Drawing.Size(604, 258)
-        Me.DataGridViewInvoiceItems.TabIndex = 7
-        '
-        'lblTotalInvoice
-        '
-        Me.lblTotalInvoice.AutoSize = True
-        Me.lblTotalInvoice.Location = New System.Drawing.Point(493, 526)
-        Me.lblTotalInvoice.Name = "lblTotalInvoice"
-        Me.lblTotalInvoice.Size = New System.Drawing.Size(45, 13)
-        Me.lblTotalInvoice.TabIndex = 8
-        Me.lblTotalInvoice.Text = "Label11"
+        Me.Label11.Location = New System.Drawing.Point(33, 261)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(126, 44)
+        Me.Label11.TabIndex = 9
+        Me.Label11.Text = "Insert Invoice number and press Enter"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'AltHealthInvoices
         '
@@ -340,10 +381,10 @@ Partial Class AltHealthInvoices
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.AltHealth.My.Resources.Resources._61639303_Logo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(885, 647)
+        Me.ClientSize = New System.Drawing.Size(891, 647)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.txtBoxInvoiceNumber)
-        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBoxInv)
         Me.Controls.Add(Me.btnClose)
@@ -355,12 +396,12 @@ Partial Class AltHealthInvoices
         Me.Text = "AltHealth Invoices"
         Me.GroupBoxInv.ResumeLayout(False)
         Me.GroupBoxInv.PerformLayout()
+        CType(Me.DataGridViewInvoiceItems, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridViewInvoiceItems, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -389,8 +430,9 @@ Partial Class AltHealthInvoices
     Friend WithEvents lblClientAddress As System.Windows.Forms.Label
     Friend WithEvents lblClientID As System.Windows.Forms.Label
     Friend WithEvents lblClientName As System.Windows.Forms.Label
-    Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents txtBoxInvoiceNumber As System.Windows.Forms.MaskedTextBox
     Friend WithEvents DataGridViewInvoiceItems As System.Windows.Forms.DataGridView
     Friend WithEvents lblTotalInvoice As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
 End Class

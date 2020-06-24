@@ -85,7 +85,7 @@ Partial Class AltHealthClientInfoAdd
         Me.TextBoxCell.Mask = "(999)-(999)-(999)"
         Me.TextBoxCell.Name = "TextBoxCell"
         Me.TextBoxCell.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxCell.TabIndex = 22
+        Me.TextBoxCell.TabIndex = 8
         '
         'TextBoxWork
         '
@@ -94,7 +94,7 @@ Partial Class AltHealthClientInfoAdd
         Me.TextBoxWork.Mask = "(999)-(999)-(999)"
         Me.TextBoxWork.Name = "TextBoxWork"
         Me.TextBoxWork.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxWork.TabIndex = 21
+        Me.TextBoxWork.TabIndex = 7
         '
         'TextBoxHome
         '
@@ -103,7 +103,7 @@ Partial Class AltHealthClientInfoAdd
         Me.TextBoxHome.Mask = "(999)-(999)-(999)"
         Me.TextBoxHome.Name = "TextBoxHome"
         Me.TextBoxHome.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxHome.TabIndex = 20
+        Me.TextBoxHome.TabIndex = 6
         '
         'ComboBoxReference
         '
@@ -113,55 +113,61 @@ Partial Class AltHealthClientInfoAdd
         Me.ComboBoxReference.Location = New System.Drawing.Point(145, 352)
         Me.ComboBoxReference.Name = "ComboBoxReference"
         Me.ComboBoxReference.Size = New System.Drawing.Size(109, 21)
-        Me.ComboBoxReference.TabIndex = 19
+        Me.ComboBoxReference.TabIndex = 10
         '
         'TextBoxEmail
         '
         Me.TextBoxEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxEmail.Location = New System.Drawing.Point(145, 318)
+        Me.TextBoxEmail.MaxLength = 200
         Me.TextBoxEmail.Name = "TextBoxEmail"
         Me.TextBoxEmail.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxEmail.TabIndex = 18
+        Me.TextBoxEmail.TabIndex = 9
         '
         'TextBoxCode
         '
         Me.TextBoxCode.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxCode.Location = New System.Drawing.Point(145, 174)
+        Me.TextBoxCode.MaxLength = 4
         Me.TextBoxCode.Name = "TextBoxCode"
         Me.TextBoxCode.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxCode.TabIndex = 14
+        Me.TextBoxCode.TabIndex = 5
         '
         'TextBoxAddress
         '
         Me.TextBoxAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxAddress.Location = New System.Drawing.Point(145, 138)
+        Me.TextBoxAddress.MaxLength = 200
         Me.TextBoxAddress.Name = "TextBoxAddress"
         Me.TextBoxAddress.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxAddress.TabIndex = 13
+        Me.TextBoxAddress.TabIndex = 4
         '
         'TextBoxSurname
         '
         Me.TextBoxSurname.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxSurname.Location = New System.Drawing.Point(145, 102)
+        Me.TextBoxSurname.MaxLength = 50
         Me.TextBoxSurname.Name = "TextBoxSurname"
         Me.TextBoxSurname.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxSurname.TabIndex = 12
+        Me.TextBoxSurname.TabIndex = 3
         '
         'TextBoxName
         '
         Me.TextBoxName.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxName.Location = New System.Drawing.Point(145, 66)
+        Me.TextBoxName.MaxLength = 30
         Me.TextBoxName.Name = "TextBoxName"
         Me.TextBoxName.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxName.TabIndex = 11
+        Me.TextBoxName.TabIndex = 2
         '
         'TextBoxClientID
         '
         Me.TextBoxClientID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxClientID.Location = New System.Drawing.Point(145, 30)
+        Me.TextBoxClientID.MaxLength = 14
         Me.TextBoxClientID.Name = "TextBoxClientID"
         Me.TextBoxClientID.Size = New System.Drawing.Size(231, 20)
-        Me.TextBoxClientID.TabIndex = 10
+        Me.TextBoxClientID.TabIndex = 1
         '
         'lblClientID
         '
@@ -277,7 +283,7 @@ Partial Class AltHealthClientInfoAdd
         Me.btnOK.Location = New System.Drawing.Point(156, 433)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(86, 42)
-        Me.btnOK.TabIndex = 13
+        Me.btnOK.TabIndex = 11
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = True
         '

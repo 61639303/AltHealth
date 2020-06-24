@@ -53,7 +53,7 @@ Partial Class AltHealthClientInfo
         Me.btnExit.Location = New System.Drawing.Point(23, 572)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(142, 55)
-        Me.btnExit.TabIndex = 5
+        Me.btnExit.TabIndex = 2
         Me.btnExit.Text = "Close"
         Me.btnExit.UseVisualStyleBackColor = False
         '
@@ -64,7 +64,7 @@ Partial Class AltHealthClientInfo
         Me.DataGridViewClientInfo.Name = "DataGridViewClientInfo"
         Me.DataGridViewClientInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridViewClientInfo.Size = New System.Drawing.Size(656, 536)
-        Me.DataGridViewClientInfo.TabIndex = 6
+        Me.DataGridViewClientInfo.TabIndex = 3
         '
         'btnNewClient
         '
@@ -74,7 +74,7 @@ Partial Class AltHealthClientInfo
         Me.btnNewClient.Location = New System.Drawing.Point(23, 206)
         Me.btnNewClient.Name = "btnNewClient"
         Me.btnNewClient.Size = New System.Drawing.Size(142, 55)
-        Me.btnNewClient.TabIndex = 7
+        Me.btnNewClient.TabIndex = 1
         Me.btnNewClient.Text = "New Client"
         Me.btnNewClient.UseVisualStyleBackColor = False
         '

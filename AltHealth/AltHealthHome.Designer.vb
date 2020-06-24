@@ -88,7 +88,7 @@ Partial Class AltHealthHome
         Me.btnExit.Location = New System.Drawing.Point(23, 572)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(142, 55)
-        Me.btnExit.TabIndex = 4
+        Me.btnExit.TabIndex = 6
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
@@ -106,7 +106,7 @@ Partial Class AltHealthHome
         Me.btnInvoices.Location = New System.Drawing.Point(23, 451)
         Me.btnInvoices.Name = "btnInvoices"
         Me.btnInvoices.Size = New System.Drawing.Size(142, 55)
-        Me.btnInvoices.TabIndex = 6
+        Me.btnInvoices.TabIndex = 4
         Me.btnInvoices.Text = "Invoices"
         Me.btnInvoices.UseVisualStyleBackColor = True
         '
@@ -115,7 +115,7 @@ Partial Class AltHealthHome
         Me.btnCart.Location = New System.Drawing.Point(785, 12)
         Me.btnCart.Name = "btnCart"
         Me.btnCart.Size = New System.Drawing.Size(88, 61)
-        Me.btnCart.TabIndex = 7
+        Me.btnCart.TabIndex = 5
         Me.btnCart.Text = "Shopping Cart"
         Me.btnCart.UseVisualStyleBackColor = True
         '
