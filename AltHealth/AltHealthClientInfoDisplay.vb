@@ -4,4 +4,6 @@
         'Closes the display screen
         Me.Close()
     End Sub
+
+
 End Class

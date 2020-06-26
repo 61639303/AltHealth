@@ -1,7 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class AltHealthInvoices
-
+    'Constant declared for VAT
+    Const VAT = 0.15
     Private Sub btnClose_Click(sender As System.Object, e As System.EventArgs) Handles btnClose.Click
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to close the Invoices screen?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
@@ -10,7 +11,7 @@ Public Class AltHealthInvoices
     End Sub
 
     Private Sub AltHealthInvoices_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
+        'Clear all textbox when form loads
         lblClientID.Text = ""
         lblInvDate.Text = ""
         lblInvPaidDate.Text = ""
@@ -58,14 +59,28 @@ Public Class AltHealthInvoices
             adapter.Fill(table)
             DataGridViewInvoiceItems.DataSource = table
 
-            Dim total As Decimal
+            Dim totalExc As Decimal
 
             For Each row As DataGridViewRow In DataGridViewInvoiceItems.Rows
                 If row.Cells(3).Value > 0 Then
-                    total += row.Cells(3).Value
+                    totalExc += row.Cells(3).Value
                 End If
             Next
-            lblTotalInvoice.Text = total
+
+            '  Dim totalex As Decimal
+            Dim totalVat As Decimal
+            Dim totalInc As Decimal
+
+
+            Dim symbol As String = "R "
+            lblTotalExcl.Text = String.Format("{0:" + symbol + "#,##0.00}", totalExc)
+            totalVat = lblTotalExcl.Text * VAT
+            lblTotalVat.Text = String.Format("{0:" + symbol + "#,##0.00}", totalVat)
+            totalInc = totalExc + totalVat
+            lblTotalIncl.Text = String.Format("{0:" + symbol + "#,##0.00}", totalInc)
+
+
+
         Catch ex As Exception
             MessageBox.Show("Invoice Number does not Exist. Please Enter the Correct Invoice Number.", "Invoice Number Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtBoxInvoiceNumber.Select(3, 5)
@@ -76,7 +91,7 @@ Public Class AltHealthInvoices
 
 
     Private Sub txtBoxInvoiceNumber_KeyDown(sender As Object, e As System.Windows.Forms.KeyEventArgs) Handles txtBoxInvoiceNumber.KeyDown
-
+        'When enter is pressed, invoice number is searched  and function to populate values are called
         If e.KeyCode = Keys.Enter Then
 
             Dim Inv_Num As String
@@ -88,7 +103,6 @@ Public Class AltHealthInvoices
             txtBoxInvoiceNumber.Select(3, 1)
         End If
     End Sub
-
 
 
 End Class
