@@ -1,4 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports Microsoft.Office.Interop
+Imports System.Net.Mail
+Imports System.Text
 
 Public Class AltHealthInvoices
     'Constant declared for VAT
@@ -104,5 +107,155 @@ Public Class AltHealthInvoices
         End If
     End Sub
 
+    Public Sub Send_Email()
 
+        Try
+            'Connect to Gmail with User ID adn Password
+            Dim Smtp_Server As New SmtpClient
+            Dim e_mail As New MailMessage()
+            Dim attachment As System.Net.Mail.Attachment
+
+            Smtp_Server.UseDefaultCredentials = False
+            Smtp_Server.Credentials = New Net.NetworkCredential("gvanniekerk000@gmail.com", "MyGvannie01*")
+            Smtp_Server.Port = 587
+            Smtp_Server.EnableSsl = True
+            Smtp_Server.Host = "smtp.gmail.com"
+            Smtp_Server.DeliveryMethod = SmtpDeliveryMethod.Network
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls
+
+
+            e_mail = New MailMessage()
+            e_mail.From = New MailAddress("gvanniekerk@daimler.com")
+            e_mail.To.Add(lblClientEmail.Text)
+            e_mail.Subject = "AltHealth Invoice Number: " & GroupBoxInv.Text
+            e_mail.IsBodyHtml = False
+
+
+            'Add Attachment to email
+            attachment = New System.Net.Mail.Attachment("C:\Users\GerritRentia\Documents\ICT3715\Invoices\" & GroupBoxInv.Text & ".docx") 'file path
+            e_mail.Attachments.Add(attachment)
+
+            'Substring for Email Body
+            Dim sb As New StringBuilder
+            sb.AppendLine("Dear " & lblClientName.Text & "," & vbNewLine)
+            sb.AppendLine(vbNewLine & "Thank you for your Purchase, attached, please find a copy of your invoice")
+            sb.AppendLine("For any queries, please feel free to contact us" & vbNewLine)
+            sb.AppendLine("Regards")
+            sb.AppendLine("AltHealth Management")
+            sb.AppendLine()
+
+            e_mail.Body = sb.ToString()
+            Smtp_Server.Send(e_mail)
+
+            'Confirmation Messge after email has been sent
+            MsgBox("Mail Sent")
+
+
+        Catch error_t As Exception
+            MsgBox("No Email Address found. Invoice not Sent to Client")
+        End Try
+
+
+    End Sub
+
+    Public Sub Generate_Invoice()
+
+        'Declare the Word Document Variables
+        Dim oWord As Word.Application
+        Dim oDoc As Word.Document
+        Dim oPara1 As Word.Paragraph, oPara2 As Word.Paragraph
+        Dim oPara3 As Word.Paragraph
+
+
+
+        'Start Word and open the document template.
+        oWord = CreateObject("Word.Application")
+
+        'If activated, this will Open MS Word and then generate the invoice
+        '   oWord.Visible = True
+        oDoc = oWord.Documents.Add
+
+        'Insert a paragraph at the beginning of the document with Invoice Data.
+        oPara1 = oDoc.Content.Paragraphs.Add
+        oPara1.Range.Font.Bold = True
+        oPara1.Range.Font.Size = 16
+        oPara1.Format.SpaceBefore = 1
+        oPara1.Range.InsertParagraphBefore()
+        oPara1.Range.Text = "Invoice Number: " & GroupBoxInv.Text & vbNewLine & "Invoice Date: " & lblInvDate.Text & vbNewLine
+        oPara1.Format.SpaceAfter = 1
+        oPara1.Range.InsertParagraphAfter()
+
+        'Insert customer informtion to Invoice
+        oPara2 = oDoc.Content.Paragraphs.Add(oDoc.Bookmarks.Item("\endofdoc").Range)
+        oPara2.Range.Font.Bold = True
+        oPara2.Range.Text = "Client Name: " & lblClientName.Text & vbNewLine &
+        "Client Address: " & lblClientAddress.Text & vbNewLine &
+        "Home Phone: " & lblClientHome.Text & vbNewLine &
+        "Work Phone: " & lblClientWork.Text & vbNewLine &
+        "Cell Phone: " & lblClientCell.Text & vbNewLine &
+        "Email: " & lblClientEmail.Text & vbNewLine
+        oPara2.Range.InsertParagraphAfter()
+
+
+        'Code to add all suplements in the datagrid view to the invoice
+        Dim rowCount As Integer = DataGridViewInvoiceItems.Rows.Count - 1
+        Dim colCount As Integer = DataGridViewInvoiceItems.Columns.Count - 1
+
+        Dim table As Word.Table
+
+        table = oDoc.Tables.Add(oDoc.Bookmarks.Item("\endofdoc").Range, rowCount + 1, colCount + 1)
+        table.Borders.OutsideColor = Word.WdColor.wdColorBlack
+        table.Borders.OutsideLineStyle = Word.WdLineStyle.wdLineStyleSingle
+        table.Borders.InsideColor = Word.WdColor.wdColorBlack
+        table.Borders.InsideLineStyle = Word.WdLineStyle.wdLineStyleSingle
+
+        For i As Integer = 0 To rowCount
+
+            For _col As Integer = 0 To colCount
+                Dim colType As Type = DataGridViewInvoiceItems.Columns(_col).GetType
+                If colType.Name = "DataGridViewImageColumn" Then
+                    Dim _image As Image = DirectCast(DataGridViewInvoiceItems.Rows(i).Cells(_col).Value, Image)
+                    Clipboard.SetImage(_image)
+                    table.Cell(i + 1, _col + 1).Range.Paste()
+                Else
+                    table.Cell(i + 1, _col + 1).Range.Text = _
+                    DataGridViewInvoiceItems.Rows(i).Cells(_col).Value.ToString()
+                End If
+            Next
+        Next
+
+
+        'Insert Totals
+        oPara3 = oDoc.Content.Paragraphs.Add(oDoc.Bookmarks.Item("\endofdoc").Range)
+        oPara3.Range.Font.Bold = True
+        oPara3.Range.Font.Size = 12
+        oPara3.Range.Text = vbNewLine & "Total Excluding: " & lblTotalExcl.Text & vbNewLine &
+        "VAT @ 15%: " & lblTotalVat.Text & vbNewLine &
+        "Total Including: " & lblTotalIncl.Text & vbNewLine
+        oPara3.Range.InsertParagraphAfter()
+
+        'Save Document to local harddrive
+        Try
+            oDoc.SaveAs("C:\Users\GerritRentia\Documents\ICT3715\Invoices\" & GroupBoxInv.Text & ".docx")
+            oDoc.Close()
+            oWord.Quit()
+        Catch error_t As Exception
+            '    MsgBox(error_t.ToString)
+        End Try
+
+
+    End Sub
+
+
+    Private Sub btnPrint_Click(sender As System.Object, e As System.EventArgs) Handles btnPrint.Click
+
+        Dim result As DialogResult = MessageBox.Show("Are you sure you want to Generate and email the invoice to the customer ?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        If result = DialogResult.Yes Then
+            Generate_Invoice()
+            Send_Email()
+        End If
+
+
+
+    End Sub
 End Class

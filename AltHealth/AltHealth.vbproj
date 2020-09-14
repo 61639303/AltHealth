@@ -49,6 +49,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
@@ -155,6 +158,12 @@
     <Compile Include="AltHealthSupplierInfoDisplay.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AltHealthSystemAdmin.Designer.vb">
+      <DependentUpon>AltHealthSystemAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AltHealthSystemAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -211,6 +220,9 @@
     <EmbeddedResource Include="AltHealthSupplierInfoDisplay.resx">
       <DependentUpon>AltHealthSupplierInfoDisplay.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AltHealthSystemAdmin.resx">
+      <DependentUpon>AltHealthSystemAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -246,6 +258,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSEXCELL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MSEXCELL2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-cart-png_224349 %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

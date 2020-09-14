@@ -24,6 +24,12 @@ Partial Class AltHealthInvoices
     Private Sub InitializeComponent()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.GroupBoxInv = New System.Windows.Forms.GroupBox()
+        Me.btnPrint = New System.Windows.Forms.Button()
+        Me.lblTotalIncl = New System.Windows.Forms.Label()
+        Me.lblTotalVat = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.lblTotalExcl = New System.Windows.Forms.Label()
         Me.DataGridViewInvoiceItems = New System.Windows.Forms.DataGridView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -50,11 +56,6 @@ Partial Class AltHealthInvoices
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtBoxInvoiceNumber = New System.Windows.Forms.MaskedTextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.lblTotalVat = New System.Windows.Forms.Label()
-        Me.lblTotalIncl = New System.Windows.Forms.Label()
         Me.GroupBoxInv.SuspendLayout()
         CType(Me.DataGridViewInvoiceItems, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,6 +74,7 @@ Partial Class AltHealthInvoices
         '
         'GroupBoxInv
         '
+        Me.GroupBoxInv.Controls.Add(Me.btnPrint)
         Me.GroupBoxInv.Controls.Add(Me.lblTotalIncl)
         Me.GroupBoxInv.Controls.Add(Me.lblTotalVat)
         Me.GroupBoxInv.Controls.Add(Me.Label12)
@@ -89,6 +91,80 @@ Partial Class AltHealthInvoices
         Me.GroupBoxInv.Size = New System.Drawing.Size(633, 561)
         Me.GroupBoxInv.TabIndex = 3
         Me.GroupBoxInv.TabStop = False
+        '
+        'btnPrint
+        '
+        Me.btnPrint.BackgroundImage = Global.AltHealth.My.Resources.Resources.print
+        Me.btnPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnPrint.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrint.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnPrint.Location = New System.Drawing.Point(309, 493)
+        Me.btnPrint.Name = "btnPrint"
+        Me.btnPrint.Size = New System.Drawing.Size(37, 33)
+        Me.btnPrint.TabIndex = 22
+        Me.btnPrint.UseVisualStyleBackColor = True
+        '
+        'lblTotalIncl
+        '
+        Me.lblTotalIncl.AutoSize = True
+        Me.lblTotalIncl.Enabled = False
+        Me.lblTotalIncl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalIncl.Location = New System.Drawing.Point(514, 522)
+        Me.lblTotalIncl.Name = "lblTotalIncl"
+        Me.lblTotalIncl.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblTotalIncl.Size = New System.Drawing.Size(52, 20)
+        Me.lblTotalIncl.TabIndex = 20
+        Me.lblTotalIncl.Text = "R0.00"
+        Me.lblTotalIncl.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'lblTotalVat
+        '
+        Me.lblTotalVat.AutoSize = True
+        Me.lblTotalVat.Enabled = False
+        Me.lblTotalVat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalVat.Location = New System.Drawing.Point(514, 498)
+        Me.lblTotalVat.Name = "lblTotalVat"
+        Me.lblTotalVat.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.lblTotalVat.Size = New System.Drawing.Size(52, 20)
+        Me.lblTotalVat.TabIndex = 19
+        Me.lblTotalVat.Text = "R0.00"
+        Me.lblTotalVat.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Enabled = False
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(390, 472)
+        Me.Label12.Name = "Label12"
+        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label12.Size = New System.Drawing.Size(77, 20)
+        Me.Label12.TabIndex = 17
+        Me.Label12.Text = "Total Excl"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Enabled = False
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(390, 524)
+        Me.Label13.Name = "Label13"
+        Me.Label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label13.Size = New System.Drawing.Size(73, 20)
+        Me.Label13.TabIndex = 16
+        Me.Label13.Text = "Total Incl"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Enabled = False
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(390, 498)
+        Me.Label16.Name = "Label16"
+        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label16.Size = New System.Drawing.Size(96, 20)
+        Me.Label16.TabIndex = 18
+        Me.Label16.Text = "VAT @ 15%"
         '
         'lblTotalExcl
         '
@@ -362,68 +438,6 @@ Partial Class AltHealthInvoices
         Me.Label11.Text = "Insert Invoice number and press Enter"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Enabled = False
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(390, 472)
-        Me.Label12.Name = "Label12"
-        Me.Label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label12.Size = New System.Drawing.Size(77, 20)
-        Me.Label12.TabIndex = 17
-        Me.Label12.Text = "Total Excl"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Enabled = False
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(390, 524)
-        Me.Label13.Name = "Label13"
-        Me.Label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label13.Size = New System.Drawing.Size(73, 20)
-        Me.Label13.TabIndex = 16
-        Me.Label13.Text = "Total Incl"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Enabled = False
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(390, 498)
-        Me.Label16.Name = "Label16"
-        Me.Label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label16.Size = New System.Drawing.Size(96, 20)
-        Me.Label16.TabIndex = 18
-        Me.Label16.Text = "VAT @ 15%"
-        '
-        'lblTotalVat
-        '
-        Me.lblTotalVat.AutoSize = True
-        Me.lblTotalVat.Enabled = False
-        Me.lblTotalVat.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalVat.Location = New System.Drawing.Point(514, 498)
-        Me.lblTotalVat.Name = "lblTotalVat"
-        Me.lblTotalVat.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblTotalVat.Size = New System.Drawing.Size(52, 20)
-        Me.lblTotalVat.TabIndex = 19
-        Me.lblTotalVat.Text = "R0.00"
-        Me.lblTotalVat.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'lblTotalIncl
-        '
-        Me.lblTotalIncl.AutoSize = True
-        Me.lblTotalIncl.Enabled = False
-        Me.lblTotalIncl.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTotalIncl.Location = New System.Drawing.Point(514, 522)
-        Me.lblTotalIncl.Name = "lblTotalIncl"
-        Me.lblTotalIncl.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.lblTotalIncl.Size = New System.Drawing.Size(52, 20)
-        Me.lblTotalIncl.TabIndex = 20
-        Me.lblTotalIncl.Text = "R0.00"
-        Me.lblTotalIncl.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
         'AltHealthInvoices
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -488,4 +502,5 @@ Partial Class AltHealthInvoices
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents btnPrint As System.Windows.Forms.Button
 End Class

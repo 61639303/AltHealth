@@ -44,6 +44,7 @@ Partial Class AltHealthClientInfoDisplay
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.TextBoxClientID = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
         Me.GroupBoxClientInfo.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -269,12 +270,21 @@ Partial Class AltHealthClientInfoDisplay
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(199, 433)
+        Me.btnClose.Location = New System.Drawing.Point(261, 433)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(86, 42)
         Me.btnClose.TabIndex = 11
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
+        '
+        'btnEdit
+        '
+        Me.btnEdit.Location = New System.Drawing.Point(169, 433)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(86, 42)
+        Me.btnEdit.TabIndex = 12
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
         'AltHealthClientInfoDisplay
         '
@@ -282,6 +292,7 @@ Partial Class AltHealthClientInfoDisplay
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(485, 487)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.GroupBoxClientInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -317,4 +328,5 @@ Partial Class AltHealthClientInfoDisplay
     Friend WithEvents TextBoxSurname As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxName As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxClientID As System.Windows.Forms.TextBox
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
 End Class

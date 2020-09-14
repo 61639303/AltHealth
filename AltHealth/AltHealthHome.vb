@@ -45,4 +45,9 @@
         End If
     End Sub
 
+    Private Sub btnSystemAdmin_Click(sender As System.Object, e As System.EventArgs) Handles btnSystemAdmin.Click
+        'Temporarily Disables the Home Screen and Opens the Shopping Cart Info Screen
+        Dim form = New AltHealthSystemAdmin()
+        form.ShowDialog()
+    End Sub
 End Class

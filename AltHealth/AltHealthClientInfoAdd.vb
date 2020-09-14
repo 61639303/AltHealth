@@ -82,8 +82,9 @@ Public Class AltHealthClientInfoAdd
                 'Call Function to Refresh Data on previous screen
                 AltHealthClientInfo.Refresh_ClientInfo()
 
+                Dim form = New AltHealthClientInfo()
                 Me.Close()
-
+                form.ShowDialog()
             End If
         End If
     End Sub
@@ -105,25 +106,40 @@ Public Class AltHealthClientInfoAdd
     'The Function Returns a TRUE or FALSE Value
     Public Function Validate_SAID(ByVal ID As String) As Boolean
         Try
+            'Declare varibale to add values of all Even Numbers
             Dim a As Integer = 0
             For i As Integer = 0 To 5
                 a += CInt(ID.Substring(i * 2, 1))
             Next
 
+            'declare variable to add values of all Odd Numbers by multiplying itself by 10, then just adding the odd number at the end
             Dim b As Integer = 0
             For i As Integer = 0 To 5
                 b = b * 10 + CInt(ID.Substring(2 * i + 1, 1))
             Next
+            'Times the variable by 2
+
             b *= 2
+
+            'declare variable that will hold value of that increases with itself + the outcome of (B Mod 10) once Do Loop is done
             Dim c As Integer = 0
+            'Do Loop continues until the Integer of the value of B divided by 10, becomes less thaan or = to 0
             Do
                 c += b Mod 10
                 b = Int(b / 10)
             Loop Until b <= 0
+
+            'The new value of C is added to the value of a above, to becoem a new c
             c += a
+
+            'declare vaiable to check against the Checkdigit of the ID nr (13th Character)
             Dim d As Integer = 0
+
             d = 10 - (c Mod 10)
+            ' If d ends up being 10, the value is made 0 again
             If (d = 10) Then d = 0
+
+            'd is checked agains the 13th digit. If it is the same, the the ID is valid. 
             If d = CInt(ID.Substring(12, 1)) Then
                 Return True
             Else

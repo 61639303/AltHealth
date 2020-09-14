@@ -311,7 +311,7 @@ Public Class AltHealthShoppingCart
             Dim attachment As System.Net.Mail.Attachment
 
             Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New Net.NetworkCredential("gvanniekerk000@gmail.com", "MyGmail01*")
+            Smtp_Server.Credentials = New Net.NetworkCredential("gvanniekerk000@gmail.com", "MyGvannie01*")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp.gmail.com"
@@ -366,7 +366,8 @@ Public Class AltHealthShoppingCart
             GroupBoxInv.Text = Inv_Num
 
         Catch error_t As Exception
-            MsgBox(error_t.ToString)
+            MsgBox("No Email Address found. Invoice not Sent to Client. Invoice Generated and Saved")
+
         End Try
 
 
@@ -469,8 +470,6 @@ Public Class AltHealthShoppingCart
         Catch ex As Exception
         End Try
     End Sub
-
-  
 
   
 End Class

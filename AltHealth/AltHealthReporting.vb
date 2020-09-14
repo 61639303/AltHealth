@@ -17,7 +17,7 @@ Public Class AltHealthReporting
         'Hides the Chart
         Chart1.Hide()
         'SQL Query to look for all unpaid Invoices
-        Dim adapter As New SqlDataAdapter("Select a.Client_id as 'CLIENT ID', b.C_name + b.C_surname as 'CLIENT NAME', a.inv_Num as 'INVOICE NUMBER', a.Inv_Date as 'INVOICE DATE' from tblInv_info a, tblClientInfo b where Inv_Paid = 'N' and Inv_Date < '2020-01-01' and a.Client_id = b.Client_id order by  a.Client_id ASC ", connection)
+        Dim adapter As New SqlDataAdapter("Select a.Client_id as 'Client ID', b.C_name + b.C_surname as 'Client Name', a.inv_Num as 'Invoice Number', a.Inv_Date as 'Invoice Date' from tblInv_info a, tblClientInfo b where Inv_Paid = 'N' and Inv_Date < '2020-01-01' and a.Client_id = b.Client_id order by  a.Client_id ASC ", connection)
         'Fills the temporary table and updates the Datagridview
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -27,7 +27,7 @@ Public Class AltHealthReporting
     Private Sub btnBirthdays_Click(sender As System.Object, e As System.EventArgs) Handles btnBirthdays.Click
         'Hides the Chart
         Chart1.Hide()
-        Dim adapter As New SqlDataAdapter("Select Client_id as 'CLIENT ID', C_name + C_surname as 'CLIENT NAME' from tblClientInfo where '2020-' + SUBSTRING  (Client_id, 3, 2) + '-' + SUBSTRING  (Client_id, 5, 2) = CONVERT(DATE,getdate())", connection)
+        Dim adapter As New SqlDataAdapter("Select Client_id as 'Client ID', C_name + C_surname as 'Client Name' from tblClientInfo where '2020-' + SUBSTRING  (Client_id, 3, 2) + '-' + SUBSTRING  (Client_id, 5, 2) = CONVERT(DATE,getdate())", connection)
         'Fills the temporary table and updates the Datagridview
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -37,7 +37,7 @@ Public Class AltHealthReporting
     Private Sub btnMinLvl_Click(sender As System.Object, e As System.EventArgs) Handles btnMinLvl.Click
         'Hides the Chart
         Chart1.Hide()
-        Dim adapter As New SqlDataAdapter("Select a.Supplement_id as 'SUPPLEMENT ID', b.Supplier_ID + ' ' + b.Contact_Person + ' ' + b.Supplier_Tel as 'SUPPLIER INFORMATION',a.Min_levels as 'MINIMUM LEVEL', a.Current_stock_levels as 'CURRENT STOCK LEVEL' from tblSupplements a , tblSupplier_Info b where Current_stock_levels < Min_levels and a.Supplier_ID = b.Supplier_ID order by b.Supplier_ID", connection)
+        Dim adapter As New SqlDataAdapter("Select a.Supplement_id as 'Supplement ID', b.Supplier_ID + ' ' + b.Contact_Person + ' ' + b.Supplier_Tel as 'Supplier Information',a.Min_levels as 'Minimum Stock Level', a.Current_stock_levels as 'Current Stock Level' from tblSupplements a , tblSupplier_Info b where Current_stock_levels < Min_levels and a.Supplier_ID = b.Supplier_ID order by b.Supplier_ID", connection)
         'Fills the temporary table and updates the Datagridview
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -47,7 +47,7 @@ Public Class AltHealthReporting
     Private Sub btnTop10_Click(sender As System.Object, e As System.EventArgs) Handles btnTop10.Click
         'Shows the Chart
         Chart1.Show()
-        Dim adapter As New SqlDataAdapter("select top 10 a.client_id ,  b.C_name +''+ b.C_surname as 'CLIENT', count(a.Client_id) as 'FREQUENCY' from tblInv_info a, tblClientInfo b where Inv_Date between '2018-01-01' and '2019-12-31' and a.Client_id = b.Client_id group by a.client_id, b.c_name, b.C_surname order by Frequency desc", connection)
+        Dim adapter As New SqlDataAdapter("select top 10 a.client_id as'Client ID' ,  b.C_name +''+ b.C_surname as 'Client Name', count(a.Client_id) as 'Frequency' from tblInv_info a, tblClientInfo b where Inv_Date between '2018-01-01' and '2019-12-31' and a.Client_id = b.Client_id group by a.client_id, b.c_name, b.C_surname order by Frequency desc", connection)
         'Fills the temporary table and updates the Datagridview
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -63,7 +63,7 @@ Public Class AltHealthReporting
             .IsValueShownAsLabel = True
             .LabelBackColor = Color.LightYellow
             .LabelForeColor = Color.Blue
-            .Points.DataBind(table.DefaultView, "CLIENT", "FREQUENCY", Nothing)
+            .Points.DataBind(table.DefaultView, "Client ID", "Frequency", Nothing)
 
         End With
         With Chart1.ChartAreas(0)
@@ -80,7 +80,7 @@ Public Class AltHealthReporting
     Private Sub btnPurchases_Click(sender As System.Object, e As System.EventArgs) Handles btnPurchases.Click
         'Shows the Chart
         Chart1.Show()
-        Dim adapter As New SqlDataAdapter("select count (Inv_Num) as 'NUM OF PURCHASES' ,  DATENAME(MONTH,Inv_Date) as 'MONTH' from tblInv_info where DATENAME(YEAR,Inv_Date) > 2011 group by DATENAME(MONTH,Inv_Date) , MONTH(Inv_Date) order by MONTH(Inv_Date)", connection)
+        Dim adapter As New SqlDataAdapter("select count (Inv_Num) as 'Number of Purchases' ,  DATENAME(MONTH,Inv_Date) as 'Month' from tblInv_info where DATENAME(YEAR,Inv_Date) > 2011 group by DATENAME(MONTH,Inv_Date) , MONTH(Inv_Date) order by MONTH(Inv_Date)", connection)
         'Fills the temporary table and updates the Datagridview
         Dim table As New DataTable()
         adapter.Fill(table)
@@ -95,7 +95,7 @@ Public Class AltHealthReporting
             .IsValueShownAsLabel = True
             .LabelBackColor = Color.LightYellow
             .LabelForeColor = Color.Blue
-            .Points.DataBind(table.DefaultView, "MONTH", "NUM OF PURCHASES", Nothing)
+            .Points.DataBind(table.DefaultView, "Month", "Number of Purchases", Nothing)
         End With
         With Chart1.ChartAreas(0)
             .AxisX.Interval = 1
@@ -111,7 +111,7 @@ Public Class AltHealthReporting
     Private Sub btnClientContact_Click(sender As System.Object, e As System.EventArgs) Handles btnClientContact.Click
         'Hides the Chart
         Chart1.Hide()
-        Dim adapter As New SqlDataAdapter("select Client_id as 'CLIENT' , C_Tel_H as 'HOME', C_Tel_W as 'WORK' , C_Tel_C as 'CELL', C_Email as 'EMAIL' from tblClientInfo where NULLIF(C_TEL_C,'') IS NULL AND NULLIF(C_EMAIL,'') IS NULL", connection)
+        Dim adapter As New SqlDataAdapter("select Client_id as 'Client ID' , C_Tel_H as 'Home Phone', C_Tel_W as 'Work Phone' , C_Tel_C as 'Cellphone', C_Email as 'Email Address' from tblClientInfo where NULLIF(C_TEL_C,'') IS NULL AND NULLIF(C_EMAIL,'') IS NULL", connection)
         'Fills the temporary table and updates the Datagridview
         Dim table As New DataTable()
         adapter.Fill(table)

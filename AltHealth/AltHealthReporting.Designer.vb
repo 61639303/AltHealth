@@ -136,11 +136,12 @@ Partial Class AltHealthReporting
         Me.btnClientContact.Name = "btnClientContact"
         Me.btnClientContact.Size = New System.Drawing.Size(105, 50)
         Me.btnClientContact.TabIndex = 12
-        Me.btnClientContact.Text = "Client Contact Information"
+        Me.btnClientContact.Text = "Client Missing Contact Information"
         Me.btnClientContact.UseVisualStyleBackColor = False
         '
         'DataGridViewReport
         '
+        Me.DataGridViewReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridViewReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewReport.Location = New System.Drawing.Point(217, 161)
         Me.DataGridViewReport.Name = "DataGridViewReport"
@@ -173,6 +174,7 @@ Partial Class AltHealthReporting
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(885, 647)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.DataGridViewReport)
         Me.Controls.Add(Me.btnClientContact)

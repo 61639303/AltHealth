@@ -27,3 +27,5 @@ C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSupplierInfoDisplay.resources
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthInvoices.resources
 C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthShoppingCart.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.AltHealthSystemAdmin.resources
+C:\Users\GerritRentia\Documents\ICT3715\Assignment 4\AltHealth\AltHealth\obj\x86\Debug\AltHealth.vbprojResolveAssemblyReference.cache

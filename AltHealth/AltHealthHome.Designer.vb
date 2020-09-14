@@ -30,6 +30,7 @@ Partial Class AltHealthHome
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnInvoices = New System.Windows.Forms.Button()
         Me.btnCart = New System.Windows.Forms.Button()
+        Me.btnSystemAdmin = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnClientInfo
@@ -112,12 +113,22 @@ Partial Class AltHealthHome
         '
         'btnCart
         '
-        Me.btnCart.Location = New System.Drawing.Point(785, 12)
+        Me.btnCart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnCart.Location = New System.Drawing.Point(757, 12)
         Me.btnCart.Name = "btnCart"
-        Me.btnCart.Size = New System.Drawing.Size(88, 61)
+        Me.btnCart.Size = New System.Drawing.Size(116, 61)
         Me.btnCart.TabIndex = 5
         Me.btnCart.Text = "Shopping Cart"
         Me.btnCart.UseVisualStyleBackColor = True
+        '
+        'btnSystemAdmin
+        '
+        Me.btnSystemAdmin.Location = New System.Drawing.Point(23, 512)
+        Me.btnSystemAdmin.Name = "btnSystemAdmin"
+        Me.btnSystemAdmin.Size = New System.Drawing.Size(142, 55)
+        Me.btnSystemAdmin.TabIndex = 7
+        Me.btnSystemAdmin.Text = "System Administration"
+        Me.btnSystemAdmin.UseVisualStyleBackColor = True
         '
         'AltHealthHome
         '
@@ -127,6 +138,7 @@ Partial Class AltHealthHome
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(885, 647)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnSystemAdmin)
         Me.Controls.Add(Me.btnCart)
         Me.Controls.Add(Me.btnInvoices)
         Me.Controls.Add(Me.Label1)
@@ -154,5 +166,6 @@ Partial Class AltHealthHome
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnInvoices As System.Windows.Forms.Button
     Friend WithEvents btnCart As System.Windows.Forms.Button
+    Friend WithEvents btnSystemAdmin As System.Windows.Forms.Button
 
 End Class
