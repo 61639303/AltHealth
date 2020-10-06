@@ -14,7 +14,7 @@ Public Class AltHealthInvoices
     End Sub
 
     Private Sub AltHealthInvoices_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-        'Clear all textbox when form loads
+        'Clear all textboxes when form loads
         lblClientID.Text = ""
         lblInvDate.Text = ""
         lblInvPaidDate.Text = ""
@@ -31,11 +31,13 @@ Public Class AltHealthInvoices
 
     Private Sub Populate_Invoice(ByVal Inv_nr As String)
 
+        'Connect to DB
         Dim connection As New SqlConnection("Server = GERRITRENTIA-PC\SQLEXPRESS; Database =  AltHealth; Integrated Security=True")
+        'SQL to get data from DB based on Invoice Nr Populted by User
         Dim adapter2 As New SqlDataAdapter("SELECT * From tblInv_info where Inv_Num = '" & Inv_nr & "'", connection)
         Try
             Dim table2 As New DataTable()
-
+            'Fill data in Temp Table to display invoice data on screen
             adapter2.Fill(table2)
 
             GroupBoxInv.Text = Inv_nr
@@ -47,8 +49,10 @@ Public Class AltHealthInvoices
 
             lblClientID.Text = table2(0)(5)
 
+            'Use ID nr of Client based on Invoice and retrieve Customer data from the DB
             Dim adapter3 As New SqlDataAdapter("SELECT * From tblClientInfo where Client_id = " & lblClientID.Text, connection)
             Dim table3 As New DataTable()
+            'Store data in Temp Table and populate on screen
             adapter3.Fill(table3)
             lblClientName.Text = table3(0)(1) & "" & table3(0)(2)
             lblClientAddress.Text = table3(0)(3) & " " & table3(0)(4)
@@ -57,11 +61,14 @@ Public Class AltHealthInvoices
             lblClientCell.Text = table3(0)(7)
             lblClientEmail.Text = table3(0)(8)
 
+            'SQL to get the Supplement information from the DB
             Dim adapter As New SqlDataAdapter("select Supplement_id as Item, Item_price as Price, Item_quantity as QTY, (Item_price * Item_quantity) as Total from tblInv_Items where Inv_Num = '" & Inv_nr & "'", connection)
             Dim table As New DataTable()
+            'Store the data in a Temp Table to display it on screen
             adapter.Fill(table)
             DataGridViewInvoiceItems.DataSource = table
 
+            'Calculate the prices of each Supplement and the VAT. 
             Dim totalExc As Decimal
 
             For Each row As DataGridViewRow In DataGridViewInvoiceItems.Rows
@@ -70,11 +77,11 @@ Public Class AltHealthInvoices
                 End If
             Next
 
-            '  Dim totalex As Decimal
+
             Dim totalVat As Decimal
             Dim totalInc As Decimal
 
-
+            ' Display the Amounts on screen in the Labels
             Dim symbol As String = "R "
             lblTotalExcl.Text = String.Format("{0:" + symbol + "#,##0.00}", totalExc)
             totalVat = lblTotalExcl.Text * VAT
@@ -82,7 +89,7 @@ Public Class AltHealthInvoices
             totalInc = totalExc + totalVat
             lblTotalIncl.Text = String.Format("{0:" + symbol + "#,##0.00}", totalInc)
 
-
+            'Error handling for incorrect invoice nr
 
         Catch ex As Exception
             MessageBox.Show("Invoice Number does not Exist. Please Enter the Correct Invoice Number.", "Invoice Number Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -123,7 +130,7 @@ Public Class AltHealthInvoices
             Smtp_Server.DeliveryMethod = SmtpDeliveryMethod.Network
             System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls
 
-
+            'Write the email and populate the subject line - Adding the invoice nr
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("gvanniekerk@daimler.com")
             e_mail.To.Add(lblClientEmail.Text)
@@ -150,7 +157,7 @@ Public Class AltHealthInvoices
             'Confirmation Messge after email has been sent
             MsgBox("Mail Sent")
 
-
+            'Error handling in case of no Email Address
         Catch error_t As Exception
             MsgBox("No Email Address found. Invoice not Sent to Client")
         End Try
@@ -172,7 +179,7 @@ Public Class AltHealthInvoices
         oWord = CreateObject("Word.Application")
 
         'If activated, this will Open MS Word and then generate the invoice
-        '   oWord.Visible = True
+
         oDoc = oWord.Documents.Add
 
         'Insert a paragraph at the beginning of the document with Invoice Data.
@@ -225,7 +232,7 @@ Public Class AltHealthInvoices
         Next
 
 
-        'Insert Totals
+        'Insert Totals in Par 3
         oPara3 = oDoc.Content.Paragraphs.Add(oDoc.Bookmarks.Item("\endofdoc").Range)
         oPara3.Range.Font.Bold = True
         oPara3.Range.Font.Size = 12

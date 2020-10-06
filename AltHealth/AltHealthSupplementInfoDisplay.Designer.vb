@@ -23,23 +23,25 @@ Partial Class AltHealthSupplementInfoDisplay
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblSupplementID = New System.Windows.Forms.Label()
-        Me.lblDesc = New System.Windows.Forms.Label()
-        Me.lblCostEx = New System.Windows.Forms.Label()
-        Me.lblCostInc = New System.Windows.Forms.Label()
-        Me.lblMin = New System.Windows.Forms.Label()
-        Me.lblCur = New System.Windows.Forms.Label()
-        Me.lblNappi = New System.Windows.Forms.Label()
-        Me.lblSupplierID = New System.Windows.Forms.Label()
-        Me.btnClose = New System.Windows.Forms.Button()
-        Me.TextBoxSupplementID = New System.Windows.Forms.TextBox()
-        Me.TextBoxDesc = New System.Windows.Forms.TextBox()
-        Me.TextBoxCostEx = New System.Windows.Forms.TextBox()
-        Me.TextBoxCostInc = New System.Windows.Forms.TextBox()
-        Me.TextBoxMinLvl = New System.Windows.Forms.TextBox()
-        Me.TextBoxCurLvl = New System.Windows.Forms.TextBox()
-        Me.TextBoxSupplierID = New System.Windows.Forms.TextBox()
         Me.TextBoxNapppi = New System.Windows.Forms.TextBox()
+        Me.TextBoxSupplierID = New System.Windows.Forms.TextBox()
+        Me.TextBoxCurLvl = New System.Windows.Forms.TextBox()
+        Me.TextBoxMinLvl = New System.Windows.Forms.TextBox()
+        Me.TextBoxCostInc = New System.Windows.Forms.TextBox()
+        Me.TextBoxCostEx = New System.Windows.Forms.TextBox()
+        Me.TextBoxDesc = New System.Windows.Forms.TextBox()
+        Me.TextBoxSupplementID = New System.Windows.Forms.TextBox()
+        Me.lblSupplierID = New System.Windows.Forms.Label()
+        Me.lblNappi = New System.Windows.Forms.Label()
+        Me.lblCur = New System.Windows.Forms.Label()
+        Me.lblMin = New System.Windows.Forms.Label()
+        Me.lblCostInc = New System.Windows.Forms.Label()
+        Me.lblCostEx = New System.Windows.Forms.Label()
+        Me.lblDesc = New System.Windows.Forms.Label()
+        Me.lblSupplementID = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -69,75 +71,77 @@ Partial Class AltHealthSupplementInfoDisplay
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Supplement Information"
         '
-        'lblSupplementID
+        'TextBoxNapppi
         '
-        Me.lblSupplementID.AutoSize = True
-        Me.lblSupplementID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblSupplementID.Location = New System.Drawing.Point(27, 44)
-        Me.lblSupplementID.Name = "lblSupplementID"
-        Me.lblSupplementID.Size = New System.Drawing.Size(77, 13)
-        Me.lblSupplementID.TabIndex = 0
-        Me.lblSupplementID.Text = "Supplement ID"
+        Me.TextBoxNapppi.Enabled = False
+        Me.TextBoxNapppi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxNapppi.Location = New System.Drawing.Point(175, 257)
+        Me.TextBoxNapppi.Name = "TextBoxNapppi"
+        Me.TextBoxNapppi.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxNapppi.TabIndex = 14
         '
-        'lblDesc
+        'TextBoxSupplierID
         '
-        Me.lblDesc.AutoSize = True
-        Me.lblDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDesc.Location = New System.Drawing.Point(27, 81)
-        Me.lblDesc.Name = "lblDesc"
-        Me.lblDesc.Size = New System.Drawing.Size(60, 13)
-        Me.lblDesc.TabIndex = 1
-        Me.lblDesc.Text = "Description"
+        Me.TextBoxSupplierID.Enabled = False
+        Me.TextBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxSupplierID.Location = New System.Drawing.Point(175, 290)
+        Me.TextBoxSupplierID.Name = "TextBoxSupplierID"
+        Me.TextBoxSupplierID.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxSupplierID.TabIndex = 14
         '
-        'lblCostEx
+        'TextBoxCurLvl
         '
-        Me.lblCostEx.AutoSize = True
-        Me.lblCostEx.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCostEx.Location = New System.Drawing.Point(27, 112)
-        Me.lblCostEx.Name = "lblCostEx"
-        Me.lblCostEx.Size = New System.Drawing.Size(77, 13)
-        Me.lblCostEx.TabIndex = 2
-        Me.lblCostEx.Text = "Cost Excluding"
+        Me.TextBoxCurLvl.Enabled = False
+        Me.TextBoxCurLvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCurLvl.Location = New System.Drawing.Point(175, 222)
+        Me.TextBoxCurLvl.Name = "TextBoxCurLvl"
+        Me.TextBoxCurLvl.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxCurLvl.TabIndex = 13
         '
-        'lblCostInc
+        'TextBoxMinLvl
         '
-        Me.lblCostInc.AutoSize = True
-        Me.lblCostInc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCostInc.Location = New System.Drawing.Point(27, 153)
-        Me.lblCostInc.Name = "lblCostInc"
-        Me.lblCostInc.Size = New System.Drawing.Size(74, 13)
-        Me.lblCostInc.TabIndex = 3
-        Me.lblCostInc.Text = "Cost Including"
+        Me.TextBoxMinLvl.Enabled = False
+        Me.TextBoxMinLvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxMinLvl.Location = New System.Drawing.Point(175, 188)
+        Me.TextBoxMinLvl.Name = "TextBoxMinLvl"
+        Me.TextBoxMinLvl.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxMinLvl.TabIndex = 12
         '
-        'lblMin
+        'TextBoxCostInc
         '
-        Me.lblMin.AutoSize = True
-        Me.lblMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMin.Location = New System.Drawing.Point(27, 188)
-        Me.lblMin.Name = "lblMin"
-        Me.lblMin.Size = New System.Drawing.Size(113, 13)
-        Me.lblMin.TabIndex = 4
-        Me.lblMin.Text = "Minimum Stock Levels"
+        Me.TextBoxCostInc.Enabled = False
+        Me.TextBoxCostInc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCostInc.Location = New System.Drawing.Point(175, 146)
+        Me.TextBoxCostInc.Name = "TextBoxCostInc"
+        Me.TextBoxCostInc.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxCostInc.TabIndex = 11
         '
-        'lblCur
+        'TextBoxCostEx
         '
-        Me.lblCur.AutoSize = True
-        Me.lblCur.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCur.Location = New System.Drawing.Point(27, 222)
-        Me.lblCur.Name = "lblCur"
-        Me.lblCur.Size = New System.Drawing.Size(106, 13)
-        Me.lblCur.TabIndex = 5
-        Me.lblCur.Text = "Current Stock Levels"
+        Me.TextBoxCostEx.Enabled = False
+        Me.TextBoxCostEx.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxCostEx.Location = New System.Drawing.Point(175, 105)
+        Me.TextBoxCostEx.Name = "TextBoxCostEx"
+        Me.TextBoxCostEx.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxCostEx.TabIndex = 10
         '
-        'lblNappi
+        'TextBoxDesc
         '
-        Me.lblNappi.AutoSize = True
-        Me.lblNappi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNappi.Location = New System.Drawing.Point(27, 257)
-        Me.lblNappi.Name = "lblNappi"
-        Me.lblNappi.Size = New System.Drawing.Size(63, 13)
-        Me.lblNappi.TabIndex = 6
-        Me.lblNappi.Text = "Nappi Code"
+        Me.TextBoxDesc.Enabled = False
+        Me.TextBoxDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxDesc.Location = New System.Drawing.Point(175, 74)
+        Me.TextBoxDesc.Name = "TextBoxDesc"
+        Me.TextBoxDesc.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxDesc.TabIndex = 9
+        '
+        'TextBoxSupplementID
+        '
+        Me.TextBoxSupplementID.Enabled = False
+        Me.TextBoxSupplementID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBoxSupplementID.Location = New System.Drawing.Point(175, 37)
+        Me.TextBoxSupplementID.Name = "TextBoxSupplementID"
+        Me.TextBoxSupplementID.Size = New System.Drawing.Size(204, 20)
+        Me.TextBoxSupplementID.TabIndex = 8
         '
         'lblSupplierID
         '
@@ -149,86 +153,104 @@ Partial Class AltHealthSupplementInfoDisplay
         Me.lblSupplierID.TabIndex = 7
         Me.lblSupplierID.Text = "Supplier ID"
         '
+        'lblNappi
+        '
+        Me.lblNappi.AutoSize = True
+        Me.lblNappi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNappi.Location = New System.Drawing.Point(27, 257)
+        Me.lblNappi.Name = "lblNappi"
+        Me.lblNappi.Size = New System.Drawing.Size(63, 13)
+        Me.lblNappi.TabIndex = 6
+        Me.lblNappi.Text = "Nappi Code"
+        '
+        'lblCur
+        '
+        Me.lblCur.AutoSize = True
+        Me.lblCur.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCur.Location = New System.Drawing.Point(27, 222)
+        Me.lblCur.Name = "lblCur"
+        Me.lblCur.Size = New System.Drawing.Size(106, 13)
+        Me.lblCur.TabIndex = 5
+        Me.lblCur.Text = "Current Stock Levels"
+        '
+        'lblMin
+        '
+        Me.lblMin.AutoSize = True
+        Me.lblMin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMin.Location = New System.Drawing.Point(27, 188)
+        Me.lblMin.Name = "lblMin"
+        Me.lblMin.Size = New System.Drawing.Size(113, 13)
+        Me.lblMin.TabIndex = 4
+        Me.lblMin.Text = "Minimum Stock Levels"
+        '
+        'lblCostInc
+        '
+        Me.lblCostInc.AutoSize = True
+        Me.lblCostInc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostInc.Location = New System.Drawing.Point(27, 153)
+        Me.lblCostInc.Name = "lblCostInc"
+        Me.lblCostInc.Size = New System.Drawing.Size(74, 13)
+        Me.lblCostInc.TabIndex = 3
+        Me.lblCostInc.Text = "Cost Including"
+        '
+        'lblCostEx
+        '
+        Me.lblCostEx.AutoSize = True
+        Me.lblCostEx.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCostEx.Location = New System.Drawing.Point(27, 112)
+        Me.lblCostEx.Name = "lblCostEx"
+        Me.lblCostEx.Size = New System.Drawing.Size(77, 13)
+        Me.lblCostEx.TabIndex = 2
+        Me.lblCostEx.Text = "Cost Excluding"
+        '
+        'lblDesc
+        '
+        Me.lblDesc.AutoSize = True
+        Me.lblDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDesc.Location = New System.Drawing.Point(27, 81)
+        Me.lblDesc.Name = "lblDesc"
+        Me.lblDesc.Size = New System.Drawing.Size(60, 13)
+        Me.lblDesc.TabIndex = 1
+        Me.lblDesc.Text = "Description"
+        '
+        'lblSupplementID
+        '
+        Me.lblSupplementID.AutoSize = True
+        Me.lblSupplementID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSupplementID.Location = New System.Drawing.Point(27, 44)
+        Me.lblSupplementID.Name = "lblSupplementID"
+        Me.lblSupplementID.Size = New System.Drawing.Size(77, 13)
+        Me.lblSupplementID.TabIndex = 0
+        Me.lblSupplementID.Text = "Supplement ID"
+        '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(199, 369)
+        Me.btnClose.Location = New System.Drawing.Point(288, 373)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(86, 42)
         Me.btnClose.TabIndex = 1
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'TextBoxSupplementID
+        'btnEdit
         '
-        Me.TextBoxSupplementID.Enabled = False
-        Me.TextBoxSupplementID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxSupplementID.Location = New System.Drawing.Point(175, 37)
-        Me.TextBoxSupplementID.Name = "TextBoxSupplementID"
-        Me.TextBoxSupplementID.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxSupplementID.TabIndex = 8
+        Me.btnEdit.Location = New System.Drawing.Point(196, 373)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(86, 42)
+        Me.btnEdit.TabIndex = 2
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = True
         '
-        'TextBoxDesc
+        'btnSave
         '
-        Me.TextBoxDesc.Enabled = False
-        Me.TextBoxDesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxDesc.Location = New System.Drawing.Point(175, 74)
-        Me.TextBoxDesc.Name = "TextBoxDesc"
-        Me.TextBoxDesc.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxDesc.TabIndex = 9
-        '
-        'TextBoxCostEx
-        '
-        Me.TextBoxCostEx.Enabled = False
-        Me.TextBoxCostEx.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCostEx.Location = New System.Drawing.Point(175, 105)
-        Me.TextBoxCostEx.Name = "TextBoxCostEx"
-        Me.TextBoxCostEx.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxCostEx.TabIndex = 10
-        '
-        'TextBoxCostInc
-        '
-        Me.TextBoxCostInc.Enabled = False
-        Me.TextBoxCostInc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCostInc.Location = New System.Drawing.Point(175, 146)
-        Me.TextBoxCostInc.Name = "TextBoxCostInc"
-        Me.TextBoxCostInc.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxCostInc.TabIndex = 11
-        '
-        'TextBoxMinLvl
-        '
-        Me.TextBoxMinLvl.Enabled = False
-        Me.TextBoxMinLvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxMinLvl.Location = New System.Drawing.Point(175, 188)
-        Me.TextBoxMinLvl.Name = "TextBoxMinLvl"
-        Me.TextBoxMinLvl.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxMinLvl.TabIndex = 12
-        '
-        'TextBoxCurLvl
-        '
-        Me.TextBoxCurLvl.Enabled = False
-        Me.TextBoxCurLvl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxCurLvl.Location = New System.Drawing.Point(175, 222)
-        Me.TextBoxCurLvl.Name = "TextBoxCurLvl"
-        Me.TextBoxCurLvl.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxCurLvl.TabIndex = 13
-        '
-        'TextBoxSupplierID
-        '
-        Me.TextBoxSupplierID.Enabled = False
-        Me.TextBoxSupplierID.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxSupplierID.Location = New System.Drawing.Point(175, 290)
-        Me.TextBoxSupplierID.Name = "TextBoxSupplierID"
-        Me.TextBoxSupplierID.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxSupplierID.TabIndex = 14
-        '
-        'TextBoxNapppi
-        '
-        Me.TextBoxNapppi.Enabled = False
-        Me.TextBoxNapppi.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxNapppi.Location = New System.Drawing.Point(175, 257)
-        Me.TextBoxNapppi.Name = "TextBoxNapppi"
-        Me.TextBoxNapppi.Size = New System.Drawing.Size(204, 20)
-        Me.TextBoxNapppi.TabIndex = 14
+        Me.btnSave.Enabled = False
+        Me.btnSave.Location = New System.Drawing.Point(104, 373)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(86, 42)
+        Me.btnSave.TabIndex = 3
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.Visible = False
         '
         'AltHealthSupplementInfoDisplay
         '
@@ -236,6 +258,8 @@ Partial Class AltHealthSupplementInfoDisplay
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(485, 427)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
@@ -267,4 +291,6 @@ Partial Class AltHealthSupplementInfoDisplay
     Friend WithEvents TextBoxMinLvl As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxCostInc As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxCostEx As System.Windows.Forms.TextBox
+    Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
 End Class

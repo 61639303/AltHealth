@@ -45,6 +45,7 @@ Partial Class AltHealthClientInfoDisplay
         Me.TextBoxClientID = New System.Windows.Forms.TextBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnSave = New System.Windows.Forms.Button()
         Me.GroupBoxClientInfo.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -270,7 +271,7 @@ Partial Class AltHealthClientInfoDisplay
         '
         'btnClose
         '
-        Me.btnClose.Location = New System.Drawing.Point(261, 433)
+        Me.btnClose.Location = New System.Drawing.Point(293, 433)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(86, 42)
         Me.btnClose.TabIndex = 11
@@ -279,12 +280,23 @@ Partial Class AltHealthClientInfoDisplay
         '
         'btnEdit
         '
-        Me.btnEdit.Location = New System.Drawing.Point(169, 433)
+        Me.btnEdit.Location = New System.Drawing.Point(201, 433)
         Me.btnEdit.Name = "btnEdit"
         Me.btnEdit.Size = New System.Drawing.Size(86, 42)
         Me.btnEdit.TabIndex = 12
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.UseVisualStyleBackColor = True
+        '
+        'btnSave
+        '
+        Me.btnSave.Enabled = False
+        Me.btnSave.Location = New System.Drawing.Point(109, 433)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(86, 42)
+        Me.btnSave.TabIndex = 13
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.Visible = False
         '
         'AltHealthClientInfoDisplay
         '
@@ -292,6 +304,7 @@ Partial Class AltHealthClientInfoDisplay
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(485, 487)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnEdit)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.GroupBoxClientInfo)
@@ -329,4 +342,5 @@ Partial Class AltHealthClientInfoDisplay
     Friend WithEvents TextBoxName As System.Windows.Forms.TextBox
     Friend WithEvents TextBoxClientID As System.Windows.Forms.TextBox
     Friend WithEvents btnEdit As System.Windows.Forms.Button
+    Friend WithEvents btnSave As System.Windows.Forms.Button
 End Class

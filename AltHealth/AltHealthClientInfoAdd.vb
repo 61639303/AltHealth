@@ -62,7 +62,8 @@ Public Class AltHealthClientInfoAdd
                 command.Parameters.Add("@Address", SqlDbType.VarChar).Value = TextBoxAddress.Text
                 command.Parameters.Add("@Code", SqlDbType.VarChar).Value = TextBoxCode.Text
                 command.Parameters.Add("@C_Email", SqlDbType.VarChar).Value = TextBoxEmail.Text
-                command.Parameters.Add("@Reference_ID", SqlDbType.VarChar).Value = ComboBoxReference.SelectedText
+                command.Parameters.Add("@Reference_ID", SqlDbType.VarChar).Value = ComboBoxReference.SelectedIndex + 1
+
                 command.Parameters.Add("@C_Tel_H", SqlDbType.VarChar).Value = homephone
                 command.Parameters.Add("@C_Tel_W", SqlDbType.VarChar).Value = workphone
                 command.Parameters.Add("@C_Tel_C", SqlDbType.VarChar).Value = cellphone

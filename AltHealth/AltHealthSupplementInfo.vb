@@ -56,14 +56,23 @@ Public Class AltHealthSupplementInfo
 
 
     Private Sub btnExport_Click(sender As System.Object, e As System.EventArgs) Handles btnExport.Click
+
+        'Code to export the Data to Excel
+        'make Progress Bar Visible
         ProgressBar1.Visible = True
+
+        'Variable to Store the user selected path
         Dim path As String
         FolderBrowserDialog1.ShowDialog()
         path = FolderBrowserDialog1.SelectedPath
+
+        'Open Excel Object
         Dim xlApp As Microsoft.Office.Interop.Excel.Application
         Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
         Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
         Dim misValue As Object = System.Reflection.Missing.Value
+
+        'Variables to write data to file with For Loop
         Dim i As Integer
         Dim j As Integer
         xlApp = New Microsoft.Office.Interop.Excel.Application
@@ -71,8 +80,10 @@ Public Class AltHealthSupplementInfo
         xlWorkSheet = xlWorkBook.Sheets("sheet1")
         xlWorkSheet.Columns.AutoFit()
 
+        'Code that loops through the Datagrid view and writes the data to the file
         For i = 0 To DataGridViewSupplementInfo.RowCount - 2
 
+            'Progress bar update
             ProgressBar1.Value = Int(i * (ProgressBar1.Maximum / DataGridViewSupplementInfo.RowCount))
             My.Application.DoEvents()
 
@@ -84,16 +95,29 @@ Public Class AltHealthSupplementInfo
             Next
         Next
 
+        'Variable to store the filename with Date and Time Object
         Dim timeStamp As DateTime = DateTime.Now
+
+        'Save the file to the Drive
         xlWorkSheet.SaveAs(path & "\Supplement Information Report " & timeStamp.ToString("yyyymmddhhmmss") & ".csv")
+
+        'Close Excel Object
         xlWorkBook.Close()
         xlApp.Quit()
 
+        'Hide the Progress Bar
         ProgressBar1.Visible = False
 
+        'Inform the User that the Report has been exported
         MsgBox("The Report has been exported.")
         Me.Show()
 
 
+    End Sub
+
+    Private Sub btnAddStock_Click(sender As System.Object, e As System.EventArgs)
+        'Temporarily Disables the Supplemetn Info Screen and Opens the Supplement Info Add Screen
+        Dim form = New AltHealthSupplementInfoAdd()
+        form.ShowDialog()
     End Sub
 End Class

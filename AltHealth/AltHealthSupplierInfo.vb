@@ -41,7 +41,7 @@ Public Class AltHealthSupplierInfo
         form.TextBoxBank.Text = DataGridViewSupplierInfo.CurrentRow.Cells(4).Value.ToString()
         form.TextBoxCode.Text = DataGridViewSupplierInfo.CurrentRow.Cells(5).Value.ToString()
         form.TextBoxBankNr.Text = DataGridViewSupplierInfo.CurrentRow.Cells(6).Value.ToString()
-        'form.TextBoxType.Text = DataGridViewSupplierInfo.CurrentRow.Cells(7).Value.ToString()
+        form.TextBoxType.Text = DataGridViewSupplierInfo.CurrentRow.Cells(7).Value.ToString()
         form.ShowDialog()
 
     End Sub
@@ -49,7 +49,7 @@ Public Class AltHealthSupplierInfo
     Public Sub Refresh_SupplierInfo()
 
         'Function that Fills Data in the Data Grid View
-        Dim adapter As New SqlDataAdapter("SELECT Supplier_ID as 'Supplier ID', Contact_Person as 'Contact Person', Supplier_Tel as ' Telephone Nr', Bank, Bank_code as 'Bank Code', Supplier_BankNum as 'Account Nr', Supplier_Type_Bank_Account as 'Account Type' From tblSupplier_Info", connection)
+        Dim adapter As New SqlDataAdapter("SELECT Supplier_ID as 'Supplier ID', Contact_Person as 'Contact Person', Supplier_Tel as ' Telephone Nr',Supplier_Email as 'Email',  Bank, Bank_code as 'Bank Code', Supplier_BankNum as 'Account Nr', Supplier_Type_Bank_Account as 'Account Type' From tblSupplier_Info", connection)
         Dim table As New DataTable()
         adapter.Fill(table)
         DataGridViewSupplierInfo.DataSource = table
@@ -60,14 +60,22 @@ Public Class AltHealthSupplierInfo
 
     Private Sub btnExport_Click(sender As System.Object, e As System.EventArgs) Handles btnExport.Click
 
+        'Code to export the Data to Excel
+        'make Progress Bar Visible
         ProgressBar1.Visible = True
+
+        'Variable to Store the user selected path
         Dim path As String
         FolderBrowserDialog1.ShowDialog()
         path = FolderBrowserDialog1.SelectedPath
+
+        'Open Excel Object
         Dim xlApp As Microsoft.Office.Interop.Excel.Application
         Dim xlWorkBook As Microsoft.Office.Interop.Excel.Workbook
         Dim xlWorkSheet As Microsoft.Office.Interop.Excel.Worksheet
         Dim misValue As Object = System.Reflection.Missing.Value
+
+        'Variables to write data to file with For Loop
         Dim i As Integer
         Dim j As Integer
         xlApp = New Microsoft.Office.Interop.Excel.Application
@@ -75,7 +83,9 @@ Public Class AltHealthSupplierInfo
         xlWorkSheet = xlWorkBook.Sheets("sheet1")
         xlWorkSheet.Columns.AutoFit()
 
+        ' Code that loops through the Datagrid view and writes the data to the file
         For i = 0 To DataGridViewSupplierInfo.RowCount - 2
+            'Progress bar update
             ProgressBar1.Value = Int(i * (ProgressBar1.Maximum / DataGridViewSupplierInfo.RowCount))
             My.Application.DoEvents()
 
@@ -88,13 +98,20 @@ Public Class AltHealthSupplierInfo
             Next
         Next
 
+        'Variable to store the filename with Date and Time Object
         Dim timeStamp As DateTime = DateTime.Now
+
+        'Save the file to the Drive
         xlWorkSheet.SaveAs(path & "\Supplier Information Report " & timeStamp.ToString("yyyymmddhhmmss") & ".csv")
+
+        'Close Excel Object
         xlWorkBook.Close()
         xlApp.Quit()
 
+        'Hide the Progress Bar
         ProgressBar1.Visible = False
 
+        'Inform the User that the Report has been exported
         MsgBox("The Report has been exported.")
         Me.Show()
 

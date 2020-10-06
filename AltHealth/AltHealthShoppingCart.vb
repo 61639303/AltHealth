@@ -459,6 +459,7 @@ Public Class AltHealthShoppingCart
 
     Private Sub NumericUpDownQty_ValueChanged(sender As System.Object, e As System.EventArgs) Handles NumericUpDownQty.ValueChanged
 
+        'If the user increases the QTY and it exceed the stock on hand, an error message is displayed. 
         Try
             Dim stock = TextBoxStock.Text
             stock = Convert.ToDouble(stock)

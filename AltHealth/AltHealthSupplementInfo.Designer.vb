@@ -30,7 +30,6 @@ Partial Class AltHealthSupplementInfo
         Me.btnExport = New System.Windows.Forms.Button()
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.btnAddStock = New System.Windows.Forms.Button()
         CType(Me.DataGridViewSupplementInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -113,18 +112,6 @@ Partial Class AltHealthSupplementInfo
         Me.ProgressBar1.TabIndex = 26
         Me.ProgressBar1.Visible = False
         '
-        'btnAddStock
-        '
-        Me.btnAddStock.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.btnAddStock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnAddStock.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnAddStock.Location = New System.Drawing.Point(23, 267)
-        Me.btnAddStock.Name = "btnAddStock"
-        Me.btnAddStock.Size = New System.Drawing.Size(142, 55)
-        Me.btnAddStock.TabIndex = 27
-        Me.btnAddStock.Text = "Add Additional Stock"
-        Me.btnAddStock.UseVisualStyleBackColor = False
-        '
         'AltHealthSupplementInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -133,7 +120,6 @@ Partial Class AltHealthSupplementInfo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(885, 647)
         Me.ControlBox = False
-        Me.Controls.Add(Me.btnAddStock)
         Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.lblHelp)
@@ -159,5 +145,4 @@ Partial Class AltHealthSupplementInfo
     Friend WithEvents btnExport As System.Windows.Forms.Button
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents FolderBrowserDialog1 As System.Windows.Forms.FolderBrowserDialog
-    Friend WithEvents btnAddStock As System.Windows.Forms.Button
 End Class

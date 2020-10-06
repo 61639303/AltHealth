@@ -36,6 +36,8 @@ Partial Class AltHealthReporting
         Me.btnClientContact = New System.Windows.Forms.Button()
         Me.DataGridViewReport = New System.Windows.Forms.DataGridView()
         Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.btnTotalSold = New System.Windows.Forms.Button()
+        Me.btnReferences = New System.Windows.Forms.Button()
         CType(Me.DataGridViewReport, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -60,7 +62,7 @@ Partial Class AltHealthReporting
         Me.btnExit.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnExit.Location = New System.Drawing.Point(23, 572)
+        Me.btnExit.Location = New System.Drawing.Point(25, 625)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(142, 55)
         Me.btnExit.TabIndex = 6
@@ -72,9 +74,9 @@ Partial Class AltHealthReporting
         Me.btnUnpaid.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnUnpaid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnUnpaid.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnUnpaid.Location = New System.Drawing.Point(217, 87)
+        Me.btnUnpaid.Location = New System.Drawing.Point(223, 93)
         Me.btnUnpaid.Name = "btnUnpaid"
-        Me.btnUnpaid.Size = New System.Drawing.Size(105, 50)
+        Me.btnUnpaid.Size = New System.Drawing.Size(154, 50)
         Me.btnUnpaid.TabIndex = 7
         Me.btnUnpaid.Text = "Unpaid Invoices"
         Me.btnUnpaid.UseVisualStyleBackColor = False
@@ -84,9 +86,9 @@ Partial Class AltHealthReporting
         Me.btnBirthdays.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnBirthdays.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnBirthdays.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnBirthdays.Location = New System.Drawing.Point(328, 87)
+        Me.btnBirthdays.Location = New System.Drawing.Point(383, 93)
         Me.btnBirthdays.Name = "btnBirthdays"
-        Me.btnBirthdays.Size = New System.Drawing.Size(105, 50)
+        Me.btnBirthdays.Size = New System.Drawing.Size(154, 50)
         Me.btnBirthdays.TabIndex = 8
         Me.btnBirthdays.Text = "Birthdays"
         Me.btnBirthdays.UseVisualStyleBackColor = False
@@ -96,9 +98,9 @@ Partial Class AltHealthReporting
         Me.btnMinLvl.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnMinLvl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnMinLvl.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnMinLvl.Location = New System.Drawing.Point(439, 87)
+        Me.btnMinLvl.Location = New System.Drawing.Point(543, 93)
         Me.btnMinLvl.Name = "btnMinLvl"
-        Me.btnMinLvl.Size = New System.Drawing.Size(105, 50)
+        Me.btnMinLvl.Size = New System.Drawing.Size(154, 50)
         Me.btnMinLvl.TabIndex = 9
         Me.btnMinLvl.Text = "Minimum Stock Levels"
         Me.btnMinLvl.UseVisualStyleBackColor = False
@@ -108,9 +110,9 @@ Partial Class AltHealthReporting
         Me.btnTop10.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnTop10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnTop10.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnTop10.Location = New System.Drawing.Point(549, 87)
+        Me.btnTop10.Location = New System.Drawing.Point(703, 93)
         Me.btnTop10.Name = "btnTop10"
-        Me.btnTop10.Size = New System.Drawing.Size(105, 50)
+        Me.btnTop10.Size = New System.Drawing.Size(154, 50)
         Me.btnTop10.TabIndex = 10
         Me.btnTop10.Text = "Top 10 Clients 2018 and 2019"
         Me.btnTop10.UseVisualStyleBackColor = False
@@ -120,9 +122,9 @@ Partial Class AltHealthReporting
         Me.btnPurchases.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnPurchases.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnPurchases.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnPurchases.Location = New System.Drawing.Point(659, 87)
+        Me.btnPurchases.Location = New System.Drawing.Point(223, 149)
         Me.btnPurchases.Name = "btnPurchases"
-        Me.btnPurchases.Size = New System.Drawing.Size(105, 50)
+        Me.btnPurchases.Size = New System.Drawing.Size(154, 50)
         Me.btnPurchases.TabIndex = 11
         Me.btnPurchases.Text = "Purchases per Month"
         Me.btnPurchases.UseVisualStyleBackColor = False
@@ -132,9 +134,9 @@ Partial Class AltHealthReporting
         Me.btnClientContact.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.btnClientContact.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.btnClientContact.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnClientContact.Location = New System.Drawing.Point(768, 87)
+        Me.btnClientContact.Location = New System.Drawing.Point(383, 149)
         Me.btnClientContact.Name = "btnClientContact"
-        Me.btnClientContact.Size = New System.Drawing.Size(105, 50)
+        Me.btnClientContact.Size = New System.Drawing.Size(154, 50)
         Me.btnClientContact.TabIndex = 12
         Me.btnClientContact.Text = "Client Missing Contact Information"
         Me.btnClientContact.UseVisualStyleBackColor = False
@@ -143,9 +145,9 @@ Partial Class AltHealthReporting
         '
         Me.DataGridViewReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.DataGridViewReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewReport.Location = New System.Drawing.Point(217, 161)
+        Me.DataGridViewReport.Location = New System.Drawing.Point(217, 209)
         Me.DataGridViewReport.Name = "DataGridViewReport"
-        Me.DataGridViewReport.Size = New System.Drawing.Size(656, 264)
+        Me.DataGridViewReport.Size = New System.Drawing.Size(646, 261)
         Me.DataGridViewReport.TabIndex = 13
         '
         'Chart1
@@ -156,16 +158,40 @@ Partial Class AltHealthReporting
         Me.Chart1.ChartAreas.Add(ChartArea1)
         Legend1.Name = "Legend1"
         Me.Chart1.Legends.Add(Legend1)
-        Me.Chart1.Location = New System.Drawing.Point(217, 431)
+        Me.Chart1.Location = New System.Drawing.Point(217, 476)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
         Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line
         Series1.Legend = "Legend1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(656, 204)
+        Me.Chart1.Size = New System.Drawing.Size(646, 204)
         Me.Chart1.TabIndex = 14
         Me.Chart1.Text = "Chart1"
+        '
+        'btnTotalSold
+        '
+        Me.btnTotalSold.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnTotalSold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnTotalSold.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnTotalSold.Location = New System.Drawing.Point(543, 149)
+        Me.btnTotalSold.Name = "btnTotalSold"
+        Me.btnTotalSold.Size = New System.Drawing.Size(154, 50)
+        Me.btnTotalSold.TabIndex = 15
+        Me.btnTotalSold.Text = "Top Products"
+        Me.btnTotalSold.UseVisualStyleBackColor = False
+        '
+        'btnReferences
+        '
+        Me.btnReferences.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnReferences.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnReferences.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnReferences.Location = New System.Drawing.Point(703, 149)
+        Me.btnReferences.Name = "btnReferences"
+        Me.btnReferences.Size = New System.Drawing.Size(154, 50)
+        Me.btnReferences.TabIndex = 16
+        Me.btnReferences.Text = "Top References"
+        Me.btnReferences.UseVisualStyleBackColor = False
         '
         'AltHealthReporting
         '
@@ -173,8 +199,10 @@ Partial Class AltHealthReporting
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.ClientSize = New System.Drawing.Size(885, 647)
+        Me.ClientSize = New System.Drawing.Size(876, 691)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnReferences)
+        Me.Controls.Add(Me.btnTotalSold)
         Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.DataGridViewReport)
         Me.Controls.Add(Me.btnClientContact)
@@ -207,4 +235,6 @@ Partial Class AltHealthReporting
     Friend WithEvents btnClientContact As System.Windows.Forms.Button
     Friend WithEvents DataGridViewReport As System.Windows.Forms.DataGridView
     Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents btnTotalSold As System.Windows.Forms.Button
+    Friend WithEvents btnReferences As System.Windows.Forms.Button
 End Class

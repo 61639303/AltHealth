@@ -122,4 +122,25 @@ Public Class AltHealthReporting
         'Hides the Chart
         Chart1.Hide()
     End Sub
+
+    Private Sub btnTotalSold_Click(sender As System.Object, e As System.EventArgs) Handles btnTotalSold.Click
+        'Hides the Chart
+        Chart1.Hide()
+        Dim adapter As New SqlDataAdapter("Select  Supplement_id as 'Supplement ID', count (Item_quantity) as 'Total Sold' from tblInv_Items  group by Supplement_id order by 'Total Sold' desc", connection)
+        'Fills the temporary table and updates the Datagridview
+        Dim table As New DataTable()
+        adapter.Fill(table)
+        DataGridViewReport.DataSource = table
+    End Sub
+
+  
+    Private Sub btnReferences_Click(sender As System.Object, e As System.EventArgs) Handles btnReferences.Click
+        'Hides the Chart
+        Chart1.Hide()
+        Dim adapter As New SqlDataAdapter("Select b.Reference_ID as 'Reference ID', b.Description as 'Description',count (a.Reference_ID) as 'Count' from tblClientInfo a , tblReference b where b.Reference_ID = a.Reference_ID group by b.Reference_ID, b.Description order by b.Reference_ID", connection)
+        'Fills the temporary table and updates the Datagridview
+        Dim table As New DataTable()
+        adapter.Fill(table)
+        DataGridViewReport.DataSource = table
+    End Sub
 End Class
